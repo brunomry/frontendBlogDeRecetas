@@ -1,11 +1,8 @@
-import React from 'react';
+import React from "react";
 
 const Inicio = () => {
-  return (
-    <div>
-      
-    </div>
-  );
+  //Logica
+  return <div>{/* Maquetado */}</div>;
 };
 
 export default Inicio;
