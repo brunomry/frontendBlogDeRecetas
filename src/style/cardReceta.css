@@ -1,0 +1,5 @@
+.imgContenedor > img {
+    object-fit: cover;
+    height: 60vh;
+    width: 100%;
+}
