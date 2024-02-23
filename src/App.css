@@ -12,5 +12,9 @@
     height: 768px;
     object-fit: cover;
   }
+
+  .cardComment{
+    width: 700px;
+  }
 }
 
