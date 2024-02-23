@@ -1,5 +1,6 @@
 import { Nav, Navbar, Container } from "react-bootstrap";
 import {Link, NavLink} from "react-router-dom";
+import logo from "../../assets/logoverde.png";
 
 const Menu = () => {
   return (
@@ -7,7 +8,7 @@ const Menu = () => {
       <Navbar expand="md" className="bg-body-tertiary">
         <Container className="d-flex flex-md-column gap-3">
           <Navbar.Brand as={Link} to="/" className="mt-3">
-            <img src="" alt="logo" className="logo" width={150} />
+            <img src={logo} alt="logo" className="logo"/>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse
