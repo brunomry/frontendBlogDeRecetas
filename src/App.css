@@ -2,6 +2,19 @@
   width: 100%;
 }
 
+.formComment .textarea{
+  resize: none;
+  height: 150px;
+}
+
+.formComment .btnComment{
+  background: #058260;
+}
+
+.formComment .btnComment:hover{
+  background: #058e69;
+}
+
 @media all and (min-width:992px){
   .detailRecipe{
     width: 800px;
@@ -13,7 +26,8 @@
     object-fit: cover;
   }
 
-  .cardComment{
+  .cardComment,
+  .formComment{
     width: 700px;
   }
 }
