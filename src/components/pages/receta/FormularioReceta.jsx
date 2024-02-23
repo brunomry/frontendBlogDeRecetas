@@ -66,7 +66,7 @@ const FormularioReceta = () => {
           <Form.Label>Autor*</Form.Label>
           <Form.Control
             type="text"
-            placeholder="Ej: saltear la carne a fuego lento..."
+            placeholder="Ej: Juan Perez"
           />
           <Form.Text className="text-danger">
         prueba de error
