@@ -28,7 +28,7 @@ const CardReceta = ({ recetas }) => {
             <br />
             {recetas.descripcionBreve}
           </p>
-          <button className='p-2'>
+          <button className='p-2 botonSeguirLeyendo'>
             Seguir leyendo <i class='bi bi-arrow-right'></i>
           </button>
         </div>
