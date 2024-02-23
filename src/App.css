@@ -1,1 +1,18 @@
-/*estilos*/
+/*estilos administracion */
+.mainSection {
+    flex-grow: 1;
+  }
+
+.img-thumbnail{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* no me quiere andar esta parte xd */
+td {
+    max-height: 4rem ; /* Establece la altura máxima que deseas */
+    overflow: hidden; /* Oculta el exceso de contenido */
+    text-overflow: ellipsis; /* Muestra puntos suspensivos para indicar que hay más contenido */
+    white-space: nowrap; /* Evita que el texto se desplace a la siguiente línea */
+  }
