@@ -1,4 +1,5 @@
 import logo from "../../assets/logoverde.png";
+import {Link} from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -18,12 +19,12 @@ const Footer = () => {
           <div className="col-md-6 col-lg-4">
             <h5 className="mb-2">Seguinos en redes sociales</h5>
             <div className="d-flex gap-3 justify-content-center">
-              <a href="">
+              <Link to="/error404">
                 <i className="bi bi-facebook fs-2"></i>
-              </a>
-              <a href="">
+              </Link>
+              <Link to="/error404">
                 <i className="bi bi-instagram fs-2 text-danger"></i>
-              </a>
+              </Link>
             </div>
           </div>
         </article>
