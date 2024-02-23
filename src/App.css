@@ -1,1 +1,16 @@
-/*estilos*/
+.imgReceta{
+  width: 100%;
+}
+
+@media all and (min-width:992px){
+  .detailRecipe{
+    width: 800px;
+  }
+  
+  .imgReceta{
+    width: 100%;
+    height: 768px;
+    object-fit: cover;
+  }
+}
+
