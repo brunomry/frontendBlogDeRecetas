@@ -1,0 +1,37 @@
+* {
+  transition: all ease 1s;
+}
+
+/* .contenedorImg {
+  width: 70%;
+  height: 55%;
+} */
+
+.contenedorImg > img {
+  object-fit: cover;
+  width: 20rem;
+  height: 20rem;
+  border-radius: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+.bi-linkedin {
+  font-size: 50px;
+  color: blue;
+}
+
+.bi-linkedin:hover {
+  color: wheat;
+}
+
+.bi-github {
+  font-size: 50px;
+  color: #000;
+}
+
+.bi-github:hover {
+  color: wheat;
+}
