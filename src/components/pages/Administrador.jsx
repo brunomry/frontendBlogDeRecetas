@@ -30,6 +30,7 @@ const Administrador = () => {
         </tbody>
       </Table>
     </section>
+    
   );
 };
 
