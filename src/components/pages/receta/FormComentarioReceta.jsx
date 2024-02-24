@@ -1,6 +1,7 @@
 import React from "react";
-import { Card, Form, Button, FormGroup } from "react-bootstrap";
+import { Card, Form, Button } from "react-bootstrap";
 import ares from "../../../assets/ares.jpeg";
+import '../../../style/detalleReceta.css';
 
 const FormComentarioReceta = () => {
   return (
@@ -15,8 +16,8 @@ const FormComentarioReceta = () => {
                 src={ares}
                 alt="imagen"
                 className="rounded-circle"
-                width={100}
-                height={100}
+                width={90}
+                height={85}
               />
             </div>
             <div className="mt-3">

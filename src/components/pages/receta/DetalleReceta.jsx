@@ -1,7 +1,7 @@
 import React from "react";
 import receta from "../../../assets/receta (1).jpeg";
-import FormularioReceta from "./FormularioReceta";
 import FormComentarioReceta from "./FormComentarioReceta";
+import '../../../style/detalleReceta.css';
 
 const DetalleReceta = () => {
   return (
