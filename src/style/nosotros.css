@@ -2,11 +2,6 @@
   transition: all ease 1s;
 }
 
-/* .contenedorImg {
-  width: 70%;
-  height: 55%;
-} */
-
 .contenedorImg > img {
   object-fit: cover;
   width: 15rem;
@@ -24,7 +19,7 @@ a {
 }
 
 .bi-linkedin:hover {
-  color: wheat;
+  color: #b4b4b4;
 }
 
 .bi-github {
@@ -33,5 +28,5 @@ a {
 }
 
 .bi-github:hover {
-  color: wheat;
+  color: #b4b4b4;
 }
