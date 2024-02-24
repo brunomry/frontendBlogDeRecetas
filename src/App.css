@@ -17,5 +17,14 @@ td {
     white-space: nowrap; /* Evita que el texto se desplace a la siguiente línea */
   }
 
+  @media screen and (min-width: 800px) {
+    /* Estilos para dispositivos grandes (>800px) */
+    .tamanoForm {
+      max-width: 800px; /* Ajusta el ancho máximo según tus necesidades */
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
+
 
  

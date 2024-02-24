@@ -9,8 +9,8 @@ import 'bootstrap-icons/font/bootstrap-icons.min.css'
 function App() {
   return (
     <>
-     { <Administrador></Administrador> }
-     {/* { <FormularioReceta></FormularioReceta>} */}
+     {/* { <Administrador></Administrador> } */}
+     { <FormularioReceta></FormularioReceta>}
     </>
   )
 }
