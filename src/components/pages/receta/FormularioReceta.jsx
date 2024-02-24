@@ -96,9 +96,10 @@ const FormularioReceta = () => {
         <Button type="submit" variant='success' className="m-2">
           Guardar
         </Button>
-        <Button type="submit" variant='danger'>
+        <Button type="submit" variant='danger' className="m-2">
           Guardar
         </Button>
+      
       </Form>
     </section>
     </div>

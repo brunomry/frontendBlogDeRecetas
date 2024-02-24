@@ -9,8 +9,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 function App() {
   return (
     <>
-     {/* <Administrador></Administrador> */}
-     <FormularioReceta></FormularioReceta>
+     { <Administrador></Administrador> }
+     {/* <FormularioReceta></FormularioReceta> */}
     </>
   )
 }

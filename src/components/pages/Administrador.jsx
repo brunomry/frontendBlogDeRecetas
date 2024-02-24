@@ -1,5 +1,6 @@
 import { Button, Table } from "react-bootstrap";
 import ItemReceta from "./receta/ItemReceta";
+import {Link} from 'react-router-dom'
 
 const Administrador = () => {
   return (
