@@ -9,8 +9,8 @@
 
 .contenedorImg > img {
   object-fit: cover;
-  width: 20rem;
-  height: 20rem;
+  width: 15rem;
+  height: 15rem;
   border-radius: 100%;
 }
 

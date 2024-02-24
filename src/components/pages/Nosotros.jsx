@@ -6,7 +6,7 @@ import '../../style/nosotros.css';
 
 const Nosotros = () => {
   return (
-    <div className='container'>
+    <div className='container p-0'>
       <h1 className='text-center my-3'>Equipo</h1>
       <p>
         Presentamos al equipo de Pasión Culinaria, responsables del exitoso blog
@@ -21,8 +21,8 @@ const Nosotros = () => {
         comprometidos en compartir nuestra pasión por la cocina y deleitar a los
         amantes de la buena comida en cada publicación que compartimos.
       </p>
-      <div className='row'>
-        <div className='col-lg-4'>
+      <div className='row m-0'>
+        <div className='col-lg-4 p-0'>
           <div className='contenedorImg d-flex justify-content-center my-3'>
             <img src={Leonel} alt='Integrante' />
           </div>
@@ -36,7 +36,7 @@ const Nosotros = () => {
             </a>
           </div>
         </div>
-        <div className='col-lg-4'>
+        <div className='col-lg-4 p-0'>
           <div className='contenedorImg d-flex justify-content-center my-3'>
             <img src={Bruno} alt='Integrante' />
           </div>
@@ -50,7 +50,7 @@ const Nosotros = () => {
             </a>
           </div>
         </div>
-        <div className='col-lg-4 '>
+        <div className='col-lg-4 p-0'>
           <div className='contenedorImg d-flex justify-content-center my-3'>
             <img src={Javier} alt='Integrante' />
           </div>
