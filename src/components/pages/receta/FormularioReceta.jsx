@@ -4,7 +4,6 @@ import { Form, Button } from "react-bootstrap";
 
 const FormularioReceta = () => {
   return (
-    <div>
        <section className="container mainSection">
       <h1 className="display-4 mt-5">Nueva receta</h1>
       <hr />
@@ -104,7 +103,6 @@ const FormularioReceta = () => {
       
       </Form>
     </section>
-    </div>
   );
 };
 

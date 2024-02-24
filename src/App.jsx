@@ -1,4 +1,5 @@
 import "./App.css";
+import "./administrador.css"
 import Administrador from "./components/pages/Administrador";
 import FormularioReceta from "./components/pages/receta/FormularioReceta";
 import Error404 from "./components/pages/Error404";
