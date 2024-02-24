@@ -1,13 +1,12 @@
 import { Button, Table } from "react-bootstrap";
 import ItemReceta from "./receta/ItemReceta";
-import {Link} from 'react-router-dom'
 
 const Administrador = () => {
   return (
-       <section className="container mainSection">
+    <section className="container mainSection">
       <div className="d-flex justify-content-between align-items-center mt-5">
         <h1 className="display-4 ">Lista de Recetas registradas</h1>
-        <Button className="btn btn-primary" >
+        <Button className="btn btn-primary">
           <i className="bi bi-file-earmark-plus"></i>
         </Button>
       </div>
@@ -17,12 +16,8 @@ const Administrador = () => {
           <tr className="text-center">
             <th>Id</th>
             <th>Nombre de Receta</th>
-            <th>Ingredientes</th>
-            <th>Preparación</th>
             <th>Fecha</th>
             <th>Imagen</th>
-            <th>Desc Breve</th>
-            <th>Desc Amplia</th>
             <th>Autor</th>
             <th>Opciones</th>
           </tr>
