@@ -1,6 +1,7 @@
 import { Nav, Navbar, Container } from "react-bootstrap";
 import {Link, NavLink} from "react-router-dom";
 import logo from "../../assets/logoverde.png";
+import '../../style/menu.css';
 
 const Menu = () => {
   return (
