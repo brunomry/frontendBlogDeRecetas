@@ -9,6 +9,23 @@
   font-style: normal;
 }
 
+header{
+  height: 230px;
+}
+
+.nav-link{
+  border-bottom: 3px solid #dcd9d6;;
+}
+
+.nav-link.active{
+  border-bottom: 3px solid #206057;
+}
+
+.nav-link:hover{
+  color: #000;
+  border-bottom: 3px solid #206057;
+}
+
 .mainSection {
   flex-grow: 1;
 }
