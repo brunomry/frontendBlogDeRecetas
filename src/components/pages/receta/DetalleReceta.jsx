@@ -1,15 +1,15 @@
 import React from "react";
-import receta from "../../../assets/receta (1).jpeg";
+import imagenReceta from "../../../assets/receta (1).jpeg";
 import FormComentarioReceta from "./FormComentarioReceta";
 import '../../../style/detalleReceta.css';
 
-const DetalleReceta = () => {
+const DetalleReceta = ({receta}) => {
   return (
     <section className="container py-5">
       <article className="detailRecipe mx-auto mb-5">
         <h1 className="text-center mb-4">Pollo a la Parrilla con Verduras Asadas</h1>
         <figure className="text-center">
-          <img src={receta} alt="imagen de receta" className="imgReceta" />
+          <img src={imagenReceta} alt="imagen de receta" className="imgReceta" />
           <figcaption className="mt-2"> 12-02-2024 | Por Juan Perez</figcaption>
         </figure>
         <p>
