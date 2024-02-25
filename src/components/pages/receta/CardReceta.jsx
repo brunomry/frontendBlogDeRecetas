@@ -1,12 +1,4 @@
 import React from 'react';
-import {
-  Button,
-  Card,
-  CardBody,
-  CardImg,
-  CardText,
-  CardTitle,
-} from 'react-bootstrap';
 import '../../../style/cardReceta.css';
 
 const CardReceta = ({ recetas }) => {
