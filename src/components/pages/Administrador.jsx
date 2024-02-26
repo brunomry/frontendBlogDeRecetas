@@ -1,8 +1,25 @@
 import { Button, Table } from "react-bootstrap";
 import ItemReceta from "./receta/ItemReceta";
-
+import { useEffect, useState } from "react";
+import { leerRecetaAPI } from "../../helpers/queries";
 
 const Administrador = () => {
+    const [recetas, setRecetas] =  useState([]);
+    
+    useEffect(  ()=>{
+      consultarAPI()
+    }, [])
+    
+    const consultarAPI = async()=>{
+      try{
+        const respuesta = await leerRecetaAPI();
+        setRecetas(respuesta);
+      }catch (error){
+        console.log(error)
+      }
+    }
+
+
   return (
     <section className="container mainSection">
       <div className="d-flex justify-content-between align-items-center mt-5">
@@ -24,10 +41,9 @@ const Administrador = () => {
           </tr>
         </thead>
         <tbody>
-          <ItemReceta></ItemReceta>
-          <ItemReceta></ItemReceta>
-          <ItemReceta></ItemReceta>
-          <ItemReceta></ItemReceta>
+        {
+            recetas.map((receta)=>  <ItemReceta key={receta.id} receta={receta}></ItemReceta>)
+          }
         </tbody>
       </Table>
     </section>
