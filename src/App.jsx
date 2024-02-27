@@ -28,11 +28,21 @@ function App() {
         ></Route>
         <Route
           path='/administrador/crear'
-          element={<FormularioReceta editar={false}></FormularioReceta>}
+          element={
+            <FormularioReceta
+              editar={false}
+              titulo='Nueva receta'
+            ></FormularioReceta>
+          }
         ></Route>
         <Route
           path='/administrador/editar/:id'
-          element={<FormularioReceta editar={true}></FormularioReceta>}
+          element={
+            <FormularioReceta
+              editar={true}
+              titulo='Editar receta'
+            ></FormularioReceta>
+          }
         ></Route>
         <Route path='*' element={<Error404></Error404>}></Route>
       </Routes>

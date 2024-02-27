@@ -20,7 +20,10 @@ const ItemReceta = ({ receta }) => {
         <Button variant='primary' className='me-lg-2'>
           <i className='bi bi-eye-fill'></i>
         </Button>
-        <Link className='me-lg-2 btn btn-warning'>
+        <Link
+          className='me-lg-2 btn btn-warning'
+          to={'/administrador/editar/' + receta.id}
+        >
           <i className='bi bi-pencil-square'></i>
         </Link>
         <Button variant='danger'>
