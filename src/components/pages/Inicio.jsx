@@ -30,8 +30,8 @@ const Inicio = () => {
         Recetas del Rincón de Placeres Gastronómicos
       </h2>
       <div className='row m-0'>
-        {recetas.map((recetas) => (
-          <CardReceta key={recetas.id} recetas={recetas} />
+        {recetas.map((receta) => (
+          <CardReceta key={receta.id} receta={receta} />
         ))}
       </div>
     </div>

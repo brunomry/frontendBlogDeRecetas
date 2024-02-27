@@ -1,7 +1,8 @@
-import React from 'react';
+import {React, useState } from 'react';
 import '../../../style/cardReceta.css';
+import {Link} from "react-router-dom";
 
-const CardReceta = ({ recetas }) => {
+const CardReceta = ({ receta }) => {
   return (
     <div className='col-lg-6 p-3'>
       <div className='contenedor'>
@@ -12,17 +13,17 @@ const CardReceta = ({ recetas }) => {
           />
         </div>
         <div className='my-3'>
-          <h3 className='m-0'>{recetas.nombreReceta}</h3>
+          <h3 className='m-0'>{receta.nombreReceta}</h3>
         </div>
         <div>
           <p className='m-0 my-3'>
-            {recetas.fecha} | por {recetas.autor}
+            {receta.fecha} | por {receta.autor}
             <br />
-            {recetas.descripcionBreve}
+            {receta.descripcionBreve}
           </p>
-          <button className='p-2 botonSeguirLeyendo'>
+          <Link className='p-2 botonSeguirLeyendo' to={`/detalleReceta/${receta.id}`}>
             Seguir leyendo <i className='bi bi-arrow-right'></i>
-          </button>
+          </Link>
         </div>
       </div>
     </div>

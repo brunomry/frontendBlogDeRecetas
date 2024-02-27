@@ -19,7 +19,7 @@ function App() {
         <Route exact path="/" element={<Inicio></Inicio>}></Route>
         <Route path="/administrador" element={<Administrador></Administrador>}></Route>
         <Route path="/nosotros" element={<Nosotros></Nosotros>}></Route>
-        <Route path="/detalleReceta" element={<DetalleReceta></DetalleReceta>}></Route>
+        <Route path="/detalleReceta/:id" element={<DetalleReceta></DetalleReceta>}></Route>
         <Route path="/administrador/crear" element={<FormularioReceta></FormularioReceta>}></Route>
         <Route path="/administrador/editar/:id" element={<FormularioReceta></FormularioReceta>}></Route>
         <Route path="*" element={<Error404></Error404>}></Route>
