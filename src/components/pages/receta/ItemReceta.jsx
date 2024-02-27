@@ -15,16 +15,23 @@ const ItemReceta = ({receta}) => {
       cancelButtonColor:"#d33",
       confirmButtonText:"Borrar",
       cancelButtonText:"Cancelar"
-    }).then((result)=>{
+    }).then( async (result)=>{
       if(result.isConfirmed){
         //logica para borrar
-        borrarRecetaAPI(receta.id);
-
-        Swal.fire({
-          title: "Borrado!",
-          text:`La receta "${receta.nombreReceta}" fue eliminada correctamente`,
-          icon: "success"
-        });
+        const respuesta = await borrarRecetaAPI(receta.id);
+        if(respuesta.status === 200){
+          Swal.fire({
+            title: "Borrado!",
+            text:`La receta "${receta.nombreReceta}" fue eliminada correctamente`,
+            icon: "success"
+          });
+        }else{
+          Swal.fire({
+            title: "Ocurrio un error!",
+            text:`La receta "${receta.nombreReceta}" no fue eliminada correctamente. Vuelva a intentarlo`,
+            icon: "error"
+          });
+        }
       }
     });
   }
