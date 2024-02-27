@@ -15,25 +15,34 @@ estas deben estar almacenadas en el localstorage o json-server.
 
 ## Logotipo 
 
-<img src="./src/assets/logoverde.png"
+<img src="./src/assets/logoverde.png">
 
 ## Link de Mockups realizados
 
-[drive]()
+[Google Drive](https://drive.google.com/drive/folders/13ZabV0a_Ao0p4eXtWI-nWSeYsAYEb3Mg?usp=drive_link)
 
 ## Link de Trello
 
-[trello]()
+[Trello](https://trello.com/b/XWWMeb7j/blog)
 
-## Link del Proyecto
+## Link del Proyecto deployado
 
 La aplicación está desplegada en Netlify. Puedes acceder haciendo clic en el siguiente enlace:
 
-[ejercicio 14](https://rincondeplaceresgastronomicos.netlify.app)
+[Ejercicio 14](https://rincondeplaceresgastronomicos.netlify.app)
 
 ## Funcionalidades Principales 
 
-- Se pueden agregar, leer, modificar y eliminar las recetas (CRUD)
+1. Consulta de Recetas: Los usuarios pueden ver una lista de recetas disponibles en la página principal del blog culinario.
+
+2. Visualización Detallada de Receta: Los usuarios pueden hacer clic en una receta para ver más detalles, como su nombre, fecha de publicación, autor, descripción breve, y tienen la opción de seguir leyendo para obtener más información.
+
+3. Administración de Recetas:
+
+    * Leer Receta (Read): Los administradores pueden ver una lista completa de todas las recetas disponibles en el blog.
+    * Crear Receta (Create): Los administradores pueden agregar nuevas recetas al blog mediante un formulario de creación.
+    * Editar Receta (Update): Los administradores pueden modificar los detalles de las recetas existentes, como el título, la descripción, los ingredientes y los pasos de preparación.
+    * Eliminar Receta (Delete): Los administradores pueden eliminar recetas que ya no deseen mantener en el blog.
 
 ## Requisitos
 
