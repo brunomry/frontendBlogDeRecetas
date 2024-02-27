@@ -1,5 +1,6 @@
 import { Button } from "react-bootstrap";
 import Swal from "sweetalert2";
+import { borrarRecetaAPI } from "../../../helpers/queries";
 
 
 const ItemReceta = ({receta}) => {
@@ -17,9 +18,11 @@ const ItemReceta = ({receta}) => {
     }).then((result)=>{
       if(result.isConfirmed){
         //logica para borrar
+        borrarRecetaAPI(receta.id);
+
         Swal.fire({
           title: "Borrado!",
-          text:`La receta "${receta.nombreReceta}" fue eliminado correctamente`,
+          text:`La receta "${receta.nombreReceta}" fue eliminada correctamente`,
           icon: "success"
         });
       }
