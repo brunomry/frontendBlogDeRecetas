@@ -1,9 +1,9 @@
 import { Button } from "react-bootstrap";
 import Swal from "sweetalert2";
-import { borrarRecetaAPI } from "../../../helpers/queries";
+import { borrarRecetaAPI, leerRecetaAPI } from "../../../helpers/queries";
 
 
-const ItemReceta = ({receta}) => {
+const ItemReceta = ({receta, setRecetas}) => {
 
   const borrarProducto = ()=>{
     Swal.fire({
@@ -17,7 +17,6 @@ const ItemReceta = ({receta}) => {
       cancelButtonText:"Cancelar"
     }).then( async (result)=>{
       if(result.isConfirmed){
-        //logica para borrar
         const respuesta = await borrarRecetaAPI(receta.id);
         if(respuesta.status === 200){
           Swal.fire({
@@ -25,6 +24,8 @@ const ItemReceta = ({receta}) => {
             text:`La receta "${receta.nombreReceta}" fue eliminada correctamente`,
             icon: "success"
           });
+          const listaRecetas = await leerRecetaAPI();
+          setRecetas(listaRecetas);
         }else{
           Swal.fire({
             title: "Ocurrio un error!",
