@@ -8,7 +8,7 @@ export const leerRecetaAPI = async () => {
   try {
     const respuesta = await fetch(URL_Receta);
     const listaReceta = await respuesta.json();
-    return listaReceta    
+    return listaReceta
   } catch (error) {
     console.log(error);
   }
