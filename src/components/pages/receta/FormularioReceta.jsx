@@ -5,7 +5,9 @@ import Swal from "sweetalert2";
 
 const FormularioReceta = () => {
   const {
+    register,
     handleSubmit,
+    formState: { errors },
     reset,
   } = useForm();
 
@@ -31,66 +33,188 @@ const FormularioReceta = () => {
     <section className="container mainSection">
       <h1 className="display-4 mt-5">Nueva receta</h1>
       <hr />
+      <p>Los campos obligatorios están marcados con <span className="text-danger fw-bold">*</span></p>
       <Form className="my-4 sizeForm" onSubmit={handleSubmit(recetaValidada)}>
         <Form.Group className="mb-3 " controlId="formNombreReceta">
-          <Form.Label>Nombre de Receta *</Form.Label>
-          <Form.Control type="text" placeholder="Ej: Pastel de papa" />
-          <Form.Text className="text-danger">prueba de error</Form.Text>
+          <Form.Label className="fw-medium">Nombre de Receta <span className="text-danger fw-bold">*</span></Form.Label>
+          <Form.Control
+            type="text"
+            placeholder="Ej: Pastel de papa"
+            {...register("nombreReceta", {
+              required: "El nombre de la receta es obligatorio",
+              minLength: {
+                value: 10,
+                message:
+                  "El nombre de la receta debe tener como mínimo 10 caracteres",
+              },
+              maxLength: {
+                value: 50,
+                message:
+                  "El nombre de la receta debe tener como máximo 50 caracteres",
+              },
+            })}
+          />
+          <Form.Text className="text-danger">
+            {errors.nombreReceta?.message}
+          </Form.Text>
         </Form.Group>
         <Form.Group className="mb-3 " controlId="formDescripcionBreve">
-          <Form.Label>Descripción breve*</Form.Label>
+          <Form.Label className="fw-medium">Descripción breve <span className="text-danger fw-bold">*</span></Form.Label>
           <Form.Control
             className="textarea"
             type="text"
             placeholder="Ej: una receta especial para comer"
             as="textarea"
+            {...register("descripcionBreve", {
+              required: "La descripción breve es obligatoria",
+              minLength: {
+                value: 10,
+                message:
+                  "La descripción breve debe tener como mínimo 10 caracteres",
+              },
+              maxLength: {
+                value: 65,
+                message:
+                  "La descripción breve debe tener como máximo 65 caracteres",
+              },
+            })}
           />
-          <Form.Text className="text-danger">prueba de error</Form.Text>
+          <Form.Text className="text-danger">
+            {errors.descripcionBreve?.message}
+          </Form.Text>
         </Form.Group>
         <Form.Group className="mb-3 " controlId="formDescripcionAmplia">
-          <Form.Label>Descripcion amplia*</Form.Label>
+          <Form.Label className="fw-medium">Descripcion amplia <span className="text-danger fw-bold">*</span></Form.Label>
           <Form.Control
             className="textarea inputBroadDescription"
             type="text"
             placeholder="Ej: una receta lista para la casa..."
             as="textarea"
+            {...register("descripcionAmplia", {
+              required: "La descripción amplia es obligatoria",
+              minLength: {
+                value: 50,
+                message:
+                  "La descripción amplia debe tener como mínimo 50 caracteres",
+              },
+              maxLength: {
+                value: 500,
+                message:
+                  "La descripción amplia debe tener como máximo 300 caracteres",
+              },
+            })}
           />
-          <Form.Text className="text-danger">prueba de error</Form.Text>
+          <Form.Text className="text-danger">
+            {errors.descripcionAmplia?.message}
+          </Form.Text>
         </Form.Group>
         <Form.Group className="mb-3 " controlId="formIngredientes">
-          <Form.Label>Ingredientes*</Form.Label>
+          <Form.Label className="fw-medium">Ingredientes <span className="text-danger fw-bold">*</span></Form.Label>
           <Form.Control
             className="textarea"
             type="text"
             as="textarea"
             placeholder="Ej: sal, pimienta, aceite, huevos..."
+            {...register("ingredientes", {
+              required: "Los ingredientes son obligatorios",
+              pattern: {
+                value: /.+?[^,],.+/,
+                message:
+                  "Los ingredientes deben ser ingresados separados por coma.",
+              },
+              minLength: {
+                value: 10,
+                message: "Debe ingresar como mínimo 10 caracteres",
+              },
+              maxLength: {
+                value: 300,
+                message: "Debe ingresar como máximo 300 caracteres",
+              },
+            })}
           />
-          <Form.Text className="text-danger">prueba de error</Form.Text>
+          <Form.Text className="text-danger">
+            {errors.ingredientes?.message}
+          </Form.Text>
         </Form.Group>
         <Form.Group className="mb-3 " controlId="formPreparacion">
-          <Form.Label>Preparación*</Form.Label>
+          <Form.Label className="fw-medium">Preparación <span className="text-danger fw-bold">*</span></Form.Label>
           <Form.Control
             className="textarea inputPreparation"
             type="text"
             as="textarea"
             placeholder="Ej: saltear la carne a fuego lento. Al horno media hora."
+            {...register("preparacion", {
+              required: "La preparación es obligatoria",
+              pattern: {
+                value: /[^\.].+?\./,
+                message:
+                  "Los pasos de la preparación deben ser ingresados separados por punto seguido.",
+              },
+              minLength: {
+                value: 10,
+                message: "Debe ingresar como mínimo 10 caracteres",
+              },
+              maxLength: {
+                value: 600,
+                message: "Debe ingresar como máximo 600 caracteres",
+              },
+            })}
           />
-          <Form.Text className="text-danger">prueba de error</Form.Text>
+          <Form.Text className="text-danger">
+            {errors.preparacion?.message}
+          </Form.Text>
         </Form.Group>
-        <Form.Group className="mb-3 " controlId="formAutor">
-          <Form.Label>Autor*</Form.Label>
-          <Form.Control type="text" placeholder="Ej: Juan Perez" />
-          <Form.Text className="text-danger">prueba de error</Form.Text>
+        <div className="row">
+        <Form.Group className="mb-3 col-md-6" controlId="formAutor">
+          <Form.Label className="fw-medium">Autor <span className="text-danger fw-bold">*</span></Form.Label>
+          <Form.Control
+            type="text"
+            placeholder="Ej: Juan Perez"
+            {...register("autor", {
+              required: "El nombre del autor es obligatorio",
+              minLength: {
+                value: 8,
+                message:
+                  "El nombre del autor debe tener como mínimo 8 caracteres",
+              },
+              maxLength: {
+                value: 50,
+                message:
+                  "El nombre del autor debe tener como máximo 50 caracteres",
+              },
+            })}
+          />
+          <Form.Text className="text-danger">{errors.autor?.message}</Form.Text>
         </Form.Group>
-        <Form.Group className="mb-3 " controlId="formFecha">
-          <Form.Label>Fecha*</Form.Label>
-          <Form.Control type="date" placeholder="Ej: 14/12/2003" />
-          <Form.Text className="text-danger">prueba de error</Form.Text>
+        <Form.Group className="mb-3 col-md-3" controlId="formFecha">
+          <Form.Label className="fw-medium">Fecha <span className="text-danger fw-bold">*</span></Form.Label>
+          <Form.Control
+            type="date"
+            placeholder="Ej: 14/12/2003"
+            {...register("fecha", {
+              required: "La fecha es obligatoria",
+            })}
+          />
+          <Form.Text className="text-danger">{errors.fecha?.message}</Form.Text>
         </Form.Group>
+        </div>
+      
         <Form.Group className="mb-3 " controlId="formImagen">
-          <Form.Label>URL de imagen*</Form.Label>
-          <Form.Control type="url" placeholder="Ej: https..." />
-          <Form.Text className="text-danger">prueba de error</Form.Text>
+          <Form.Label className="fw-medium">URL de imagen <span className="text-danger fw-bold">*</span></Form.Label>
+          <Form.Control
+            type="url"
+            placeholder="Ej: https://ejemplo.com/imagen-ensalada-quinoa.jpg"
+            {...register("imagen", {
+              required: "La imagen es obligatoria",
+              pattern: {
+                value: /(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|jpeg|gif|png)/,
+                message: "Debe ingresar una URL válida (jpg|jpeg|gif|png)",
+              },
+            })}
+          />
+          <Form.Text className="text-danger">
+            {errors.imagen?.message}
+          </Form.Text>
         </Form.Group>
 
         <Form.Group className="mb-3 ">

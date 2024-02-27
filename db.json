@@ -34,16 +34,15 @@
       "imagen": "https://ejemplo.com/imagen-tarta-manzana.jpg"
     },
     {
-      "id": "7107"
-    },
-    {
-      "id": "cf8a"
-    },
-    {
-      "id": "87d3"
-    },
-    {
-      "id": "4c31"
+      "id": "5932",
+      "nombreReceta": "Ensalada de Quinoa y Aguacate",
+      "descripcionBreve": "Una ensalada fresca y nutritiva",
+      "descripcionAmplia": "Esta ensalada de quinoa y aguacate es una opción saludable y deliciosa para cualquier comida o cena. La combinación de ingredientes frescos y nutritivos la convierte en una opción perfecta para aquellos que buscan una alimentación balanceada y llena de sabor.",
+      "ingredientes": "1 taza de quinoa, 2 aguacates maduros, 1 pepino, 1 tomate, Zumo de 1 limón, Aceite de oliva, Sal y pimienta al gusto",
+      "preparacion": "Enjuagar la quinoa bajo agua fría y cocinarla según las instrucciones del paquete. Dejar enfriar. Pelar y cortar los aguacates, el pepino y el tomate en cubos. En un bol grande, mezclar la quinoa cocida, los aguacates, el pepino y el tomate. ",
+      "autor": "María García",
+      "fecha": "2024-02-26",
+      "imagen": "https://ejemplo.com/imagen-ensalada-quinoa.jpg"
     }
   ]
 }
