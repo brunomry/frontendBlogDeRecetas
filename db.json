@@ -57,8 +57,29 @@
       "nombreReceta": "Tarta de Manzana Casera",
       "fecha": "2024-02-21",
       "autor": "Ana López",
-      "ingredientes": ["3 manzanas", "200g de harina", "100g de mantequilla", "100g de azúcar", "2 huevos", "1 cucharadita de levadura en polvo", "Canela al gusto"],
-      "preparacion": "Precalentar el horno a 180°C. Pelar y cortar las manzanas en rodajas finas. En un bol, batir los huevos con el azúcar. Agregar la harina tamizada, la levadura en polvo y la canela. Mezclar bien. Derretir la mantequilla y añadirla a la mezcla. Verter la mitad de la mezcla en un molde para tarta previamente engrasado. Colocar una capa de rodajas de manzana sobre la mezcla. Verter el resto de la mezcla sobre las manzanas. Colocar otra capa de rodajas de manzana encima. Hornear durante aproximadamente 40-45 minutos o hasta que esté dorada y cocida por dentro. Dejar enfriar antes de desmoldar y servir.",
+      "ingredientes": [
+        "3 manzanas",
+        "200g de harina",
+        "100g de mantequilla",
+        "100g de azúcar",
+        "2 huevos",
+        "1 cucharadita de levadura en polvo",
+        "Canela al gusto"
+      ],
+      "preparacion": [
+        "Precalentar el horno a 180°C",
+        "Pelar y cortar las manzanas en rodajas finas.",
+        "En un bol, batir los huevos con el azúcar",
+        "Agregar la harina tamizada, la levadura en polvo y la canela.",
+        "Mezclar bien.",
+        "Derretir la mantequilla y añadirla a la mezcla",
+        "Verter la mitad de la mezcla en un molde para tarta previamente engrasado",
+        "Colocar una capa de rodajas de manzana sobre la mezcla.",
+        "Verter el resto de la mezcla sobre las manzanas.",
+        "Colocar otra capa de rodajas de manzana encima.",
+        "Hornear durante aproximadamente 40-45 minutos o hasta que esté dorada y cocida por dentro.",
+        "Dejar enfriar antes de desmoldar y servir."
+      ],
       "descripcionBreve": "Una clásica y reconfortante tarta para disfrutar en cualquier momento.",
       "descripcionAmplia": "La tarta de manzana casera es un postre clásico que nunca pasa de moda. Con su base de masa esponjosa y sus capas de manzana caramelizada, es la opción perfecta para una merienda o un postre reconfortante. Esta receta casera es fácil de hacer y garantiza resultados deliciosos cada vez.",
       "imagen": "https://ejemplo.com/imagen-tarta-manzana.jpg"
