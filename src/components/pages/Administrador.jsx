@@ -2,29 +2,29 @@ import { Button, Table } from "react-bootstrap";
 import ItemReceta from "./receta/ItemReceta";
 import { useEffect, useState } from "react";
 import { leerRecetaAPI } from "../../helpers/queries";
+import { Link } from "react-router-dom";
 
 const Administrador = () => {
-    const [recetas, setRecetas] =  useState([]);
-    
-    useEffect(  ()=>{
-      consultarAPI()
-    }, [])
-    
-    const consultarAPI = async()=>{
-      try{
-        const respuesta = await leerRecetaAPI();
-        setRecetas(respuesta);
-      }catch (error){
-        console.log(error)
-      }
-    }
+  const [recetas, setRecetas] = useState([]);
 
+  useEffect(() => {
+    consultarAPI();
+  }, []);
+
+  const consultarAPI = async () => {
+    try {
+      const respuesta = await leerRecetaAPI();
+      setRecetas(respuesta);
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   return (
     <section className="container mainSection">
       <div className="d-flex justify-content-between align-items-center mt-5">
         <h1 className="display-4 ">Lista de Recetas registradas</h1>
-        <Button className="btn btn-primary">
+        <Button as={Link} to={"/administrador/crear"} className="btn btn-primary">
           <i className="bi bi-file-earmark-plus"></i>
         </Button>
       </div>
@@ -41,13 +41,12 @@ const Administrador = () => {
           </tr>
         </thead>
         <tbody>
-        {
-            recetas.map((receta)=>  <ItemReceta key={receta.id} receta={receta}></ItemReceta>)
-          }
+          {recetas.map((receta) => (
+            <ItemReceta key={receta.id} receta={receta}></ItemReceta>
+          ))}
         </tbody>
       </Table>
     </section>
-    
   );
 };
 

@@ -1,6 +1,5 @@
 import { Button } from "react-bootstrap";
 
-
 const ItemReceta = ({receta}) => {
   return (
     <tr>

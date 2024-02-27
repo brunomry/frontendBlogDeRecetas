@@ -22,10 +22,21 @@
       white-space: nowrap; /* Evita que el texto se desplace a la siguiente línea */
     }
   
+  .textarea{
+    resize: none;
+  }
+
+  .inputBroadDescription{
+    height: 150px;
+  }
+
+  .inputPreparation{
+    height: 200px;
+  }
   
     @media screen and (min-width: 800px) {
       /* Estilos para dispositivos grandes (>800px) */
-      .tamanoForm {
+      .sizeForm {
         max-width: 800px; /* Ajusta el ancho máximo según tus necesidades */
         margin-right: auto;
         margin-left: auto;
