@@ -1,15 +1,15 @@
 {
   "recetas": [
     {
-      "id": "1",
       "nombreReceta": "Pollo a la Parrilla con Verduras Asadas",
-      "fecha": "2024-02-21",
-      "autor": "Juan Pérez",
-      "ingredientes": "4 pechugas de pollo, 1 pimiento rojo, 1 pimiento verde, 1 cebolla, 2 zanahorias, Aceite de oliva, Sal y pimienta al gusto",
-      "preparacion": "Lavar y cortar las verduras en trozos medianos. Marinar las pechugas de pollo con sal, pimienta y un poco de aceite de oliva. Precalentar la parrilla a fuego medio-alto. Asar las pechugas de pollo hasta que estén cocidas por completo, aproximadamente 8-10 minutos por cada lado. Mientras tanto, colocar las verduras en una bandeja para hornear, rociar con aceite de oliva, salpimentar al gusto y hornear a 200°C durante 20-25 minutos o hasta que estén tiernas. Servir el pollo junto con las verduras asadas y disfrutar",
       "descripcionBreve": "Una deliciosa y saludable opción para una comida completa.",
       "descripcionAmplia": "Este plato combina la jugosidad del pollo a la parrilla con la frescura y sabor de las verduras asadas. Es una opción perfecta para una comida completa y nutritiva, ideal para toda la familia.",
-      "imagen": "https://ejemplo.com/imagen-pollo-parrilla.jpg"
+      "ingredientes": "4 pechugas de pollo, 1 pimiento rojo, 1 pimiento verde, 1 cebolla, 2 zanahorias, Aceite de oliva, Sal y pimienta al gusto",
+      "preparacion": "Lavar y cortar las verduras en trozos medianos. Marinar las pechugas de pollo con sal, pimienta y un poco de aceite de oliva. Precalentar la parrilla a fuego medio-alto. Asar las pechugas de pollo hasta que estén cocidas por completo, aproximadamente 8-10 minutos por cada lado. Mientras tanto, colocar las verduras en una bandeja para hornear, rociar con aceite de oliva, salpimentar al gusto y hornear a 200°C durante 20-25 minutos o hasta que estén tiernas. Servir el pollo junto con las verduras asadas y disfrutar",
+      "autor": "Juan Pérez",
+      "fecha": "2024-02-21",
+      "imagen": "https://ejemplo.com/imagen-pollo-parrilla.jpg",
+      "id": "1"
     },
     {
       "id": "5932",

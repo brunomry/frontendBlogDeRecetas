@@ -23,10 +23,13 @@ function App() {
           element={<Administrador></Administrador>}
         ></Route>
         <Route
-          path='./administrador/verDetalle/:id'
+          path='/administrador/verDetalle/:id'
           element={
             <FormularioReceta
-              titulo='Detalles de la receta'
+              titulo='Detalle de la receta'
+              boton="Volver"
+              deshabilitado={true}
+              ocultar={true}
               verDetalle={true}
             ></FormularioReceta>
           }
@@ -41,6 +44,9 @@ function App() {
           element={
             <FormularioReceta
               editar={false}
+              deshabilitado={false}
+              boton="Cancelar"
+              ocultar={false}
               titulo='Nueva receta'
             ></FormularioReceta>
           }
@@ -50,6 +56,8 @@ function App() {
           element={
             <FormularioReceta
               editar={true}
+              boton="Cancelar"
+              ocultar={false}
               titulo='Editar receta'
             ></FormularioReceta>
           }

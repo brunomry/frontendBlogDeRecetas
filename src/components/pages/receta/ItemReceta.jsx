@@ -56,7 +56,7 @@ const ItemReceta = ({ receta, setRecetas }) => {
           variant='primary'
           className='me-lg-2'
           as={Link}
-          to={'./administrador/verDetalle/:id'}
+          to={'/administrador/verDetalle/' + receta.id}
         >
           <i className='bi bi-eye-fill'></i>
         </Button>
