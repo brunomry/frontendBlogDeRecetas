@@ -1,6 +1,5 @@
-
-import {React, useEffect, useState } from 'react';
-import { leerRecetas } from '../../helpers/queries';
+import { React, useEffect, useState } from 'react';
+import { leerRecetaAPI } from '../../helpers/queries';
 import CardReceta from '../pages/receta/CardReceta.jsx';
 
 const Inicio = () => {
@@ -10,7 +9,7 @@ const Inicio = () => {
   }, []);
   const consultarAPI = async () => {
     try {
-      const respuesta = await leerRecetas();
+      const respuesta = await leerRecetaAPI();
       setRecetas(respuesta);
     } catch (error) {
       console.log(error);

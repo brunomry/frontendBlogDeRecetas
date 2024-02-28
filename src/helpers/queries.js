@@ -1,8 +1,7 @@
 //consultas
 
-
 const URL_Recetas = import.meta.env.VITE_API_RECETAS;
-export const leerRecetas = async () => {
+export const leerRecetaAPI = async () => {
   try {
     const respuesta = await fetch(URL_Recetas);
     const listaRecetas = await respuesta.json();
@@ -13,7 +12,7 @@ export const leerRecetas = async () => {
 };
 export const obtenerRecetaAPI = async (id) => {
   try {
-    const respuesta = await fetch(URL_Receta + '/' + id);
+    const respuesta = await fetch(URL_Recetas + '/' + id);
     console.log(respuesta);
     return respuesta;
   } catch (error) {
@@ -24,7 +23,7 @@ export const obtenerRecetaAPI = async (id) => {
 //POST
 export const crearRecetaAPI = async (recetaNueva) => {
   try {
-    const respuesta = await fetch(URL_Receta, {
+    const respuesta = await fetch(URL_Recetas, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -41,7 +40,7 @@ export const crearRecetaAPI = async (recetaNueva) => {
 //PUT
 export const editarRecetaAPI = async (recetaModificada, id) => {
   try {
-    const respuesta = await fetch(`${URL_Receta}/${id}`, {
+    const respuesta = await fetch(`${URL_Recetas}/${id}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
@@ -55,16 +54,17 @@ export const editarRecetaAPI = async (recetaModificada, id) => {
 };
 
 //DELETE
-export const borrarRecetaAPI = async(id)=>{
-  try{
-    const respuesta = await fetch(`${URL_Receta}/${id}`,{
-      method: "DELETE"});
-      console.log(respuesta);
-      return respuesta;
-  }catch(error){
+export const borrarRecetaAPI = async (id) => {
+  try {
+    const respuesta = await fetch(`${URL_Recetas}/${id}`, {
+      method: 'DELETE',
+    });
+    console.log(respuesta);
+    return respuesta;
+  } catch (error) {
     console.log(error);
   }
-}
+};
 //detalle receta
 const buscarReceta = (recetas, id) => {
   return recetas.find((receta) => receta.id === id);
@@ -81,4 +81,3 @@ export const obtenerRecetaPorID = async (id) => {
     return null;
   }
 };
-

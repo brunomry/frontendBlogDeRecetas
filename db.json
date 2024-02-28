@@ -1,7 +1,7 @@
 {
   "recetas": [
     {
-      "id": "1"
+      "id": "1",
       "nombreReceta": "Pollo a la Parrilla con Verduras Asadas",
       "fecha": "2024-02-21",
       "autor": "Juan Pérez",
@@ -9,19 +9,7 @@
       "preparacion": "Lavar y cortar las verduras en trozos medianos. Marinar las pechugas de pollo con sal, pimienta y un poco de aceite de oliva. Precalentar la parrilla a fuego medio-alto. Asar las pechugas de pollo hasta que estén cocidas por completo, aproximadamente 8-10 minutos por cada lado. Mientras tanto, colocar las verduras en una bandeja para hornear, rociar con aceite de oliva, salpimentar al gusto y hornear a 200°C durante 20-25 minutos o hasta que estén tiernas. Servir el pollo junto con las verduras asadas y disfrutar",
       "descripcionBreve": "Una deliciosa y saludable opción para una comida completa.",
       "descripcionAmplia": "Este plato combina la jugosidad del pollo a la parrilla con la frescura y sabor de las verduras asadas. Es una opción perfecta para una comida completa y nutritiva, ideal para toda la familia.",
-      "imagen": "https://ejemplo.com/imagen-pollo-parrilla.jpg",
-    
-    },
-    {
-      "id": "2",
-      "nombreReceta": "Ensalada de Quinoa y Aguacate",
-      "fecha": "2024-02-21",
-      "autor": "María García",
-      "ingredientes": "1 taza de quinoa, 2 aguacates maduros, 1 pepino, 1 tomate, Zumo de 1 limón, Aceite de oliva, Sal y pimienta al gusto",
-      "preparacion": "Enjuagar la quinoa bajo agua fría y cocinarla según las instrucciones del paquete. Dejar enfriar. Pelar y cortar los aguacates, el pepino y el tomate en cubos. En un bol grande, mezclar la quinoa cocida, los aguacates, el pepino y el tomate. Agregar el zumo de limón, un chorrito de aceite de oliva, sal y pimienta al gusto. Mezclar bien. Refrigerar durante al menos 30 minutos antes de servir. Decorar con hojas de cilantro fresco antes de servir, si se desea.",
-      "descripcionBreve": "Una ensalada fresca y nutritiva perfecta para cualquier ocasión.",
-      "descripcionAmplia": "Esta ensalada de quinoa y aguacate es una opción saludable y deliciosa para cualquier comida o cena. La combinación de ingredientes frescos y nutritivos la convierte en una opción perfecta para aquellos que buscan una alimentación balanceada y llena de sabor.",
-      "imagen": "https://ejemplo.com/imagen-ensalada-quinoa.jpg"
+      "imagen": "https://ejemplo.com/imagen-pollo-parrilla.jpg"
     },
     {
       "id": "5932",
@@ -35,26 +23,26 @@
       "imagen": "https://ejemplo.com/imagen-ensalada-quinoa.jpg"
     },
     {
-      "id": "3",
-      "nombreReceta": "Tarta de Manzana Casera",
-      "fecha": "2024-02-21",
-      "autor": "Ana López",
-      "ingredientes": "3 manzanas, 200g de harina, 100g de mantequilla, 100g de azúcar, 2 huevos, 1 cucharadita de levadura en polvo, Canela al gusto",
-      "preparacion": "Precalentar el horno a 180°C. Pelar y cortar las manzanas en rodajas finas. En un bol, batir los huevos con el azúcar. Agregar la harina tamizada, la levadura en polvo y la canela. Mezclar bien. Derretir la mantequilla y añadirla a la mezcla. Verter la mitad de la mezcla en un molde para tarta previamente engrasado. Colocar una capa de rodajas de manzana sobre la mezcla. Verter el resto de la mezcla sobre las manzanas. Colocar otra capa de rodajas de manzana encima. Hornear durante aproximadamente 40-45 minutos o hasta que esté dorada y cocida por dentro. Dejar enfriar antes de desmoldar y servir",
+      "nombreReceta": "Tarta de Manzano Casera",
       "descripcionBreve": "Una clásica y reconfortante tarta para disfrutar en cualquier momento.",
       "descripcionAmplia": "La tarta de manzana casera es un postre clásico que nunca pasa de moda. Con su base de masa esponjosa y sus capas de manzana caramelizada, es la opción perfecta para una merienda o un postre reconfortante. Esta receta casera es fácil de hacer y garantiza resultados deliciosos cada vez.",
-      "imagen": "https://ejemplo.com/imagen-tarta-manzana.jpg"
+      "ingredientes": "3 manzanas, 200g de harina, 100g de mantequilla, 100g de azúcar, 2 huevos, 1 cucharadita de levadura en polvo, Canela al gusto",
+      "preparacion": "Precalentar el horno a 180°C. Pelar y cortar las manzanas en rodajas finas. En un bol, batir los huevos con el azúcar. Agregar la harina tamizada, la levadura en polvo y la canela. Mezclar bien. Derretir la mantequilla y añadirla a la mezcla. Verter la mitad de la mezcla en un molde para tarta previamente engrasado. Colocar una capa de rodajas de manzana sobre la mezcla. Verter el resto de la mezcla sobre las manzanas. Colocar otra capa de rodajas de manzana encima. Hornear durante aproximadamente 40-45 minutos o hasta que esté dorada y cocida por dentro. Dejar enfriar antes de desmoldar y servir",
+      "autor": "Ana López",
+      "fecha": "2024-02-21",
+      "imagen": "https://ejemplo.com/imagen-tarta-manzana.jpg",
+      "id": "3"
     },
     {
-      "id": "5932",
-      "nombreReceta": "Ensalada de Quinoa y Aguacate",
-      "autor": "María García",
-      "fecha": "2024-02-26",
-      "descripcionBreve": "Una ensalada fresca y nutritiva",
-      "descripcionAmplia": "Esta ensalada de quinoa y aguacate es una opción saludable y deliciosa para cualquier comida o cena. La combinación de ingredientes frescos y nutritivos la convierte en una opción perfecta para aquellos que buscan una alimentación balanceada y llena de sabor.",
-      "ingredientes": "1 taza de quinoa, 2 aguacates maduros, 1 pepino, 1 tomate, Zumo de 1 limón, Aceite de oliva, Sal y pimienta al gusto",
-      "preparacion": "Enjuagar la quinoa bajo agua fría y cocinarla según las instrucciones del paquete. Dejar enfriar. Pelar y cortar los aguacates, el pepino y el tomate en cubos. En un bol grande, mezclar la quinoa cocida, los aguacates, el pepino y el tomate",  
-      "imagen": "https://ejemplo.com/imagen-ensalada-quinoa.jpg"
+      "id": "c3bf",
+      "nombreReceta": "Pastel de papa",
+      "descripcionBreve": "Un pastel de papa :)",
+      "descripcionAmplia": "\nEl pastel de papa es un plato tradicional hecho con capas de puré de papas suave intercaladas con relleno sazonado de carne molida y vegetales. Es reconfortante, sabroso y perfecto para ocasiones familiares.",
+      "ingredientes": "Sal, pimienta, mercurio, dinamita, huevo",
+      "preparacion": "\nEl pastel de papa es un plato tradicional hecho con capas de puré de papas suave intercaladas con relleno sazonado de carne molida y vegetales. Es reconfortante, sabroso y perfecto para ocasiones familiares.",
+      "autor": "Cordero Leonel",
+      "fecha": "2024-02-07",
+      "imagen": "https://images.pexels.com/photos/302899/pexels-photo-302899.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
     }
   ]
 }

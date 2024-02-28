@@ -134,9 +134,9 @@ const FormularioReceta = ({ editar, titulo }) => {
                   'La descripción breve debe tener como mínimo 10 caracteres',
               },
               maxLength: {
-                value: 65,
+                value: 75,
                 message:
-                  'La descripción breve debe tener como máximo 65 caracteres',
+                  'La descripción breve debe tener como máximo 75 caracteres',
               },
             })}
           />
@@ -222,8 +222,8 @@ const FormularioReceta = ({ editar, titulo }) => {
                 message: 'Debe ingresar como mínimo 10 caracteres',
               },
               maxLength: {
-                value: 600,
-                message: 'Debe ingresar como máximo 600 caracteres',
+                value: 800,
+                message: 'Debe ingresar como máximo 800 caracteres',
               },
             })}
           />

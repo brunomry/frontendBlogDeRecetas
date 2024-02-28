@@ -24,7 +24,7 @@ function App() {
         ></Route>
         <Route path='/nosotros' element={<Nosotros></Nosotros>}></Route>
         <Route
-          path='/detalleReceta'
+          path='/detalleReceta/:id'
           element={<DetalleReceta></DetalleReceta>}
         ></Route>
         <Route
