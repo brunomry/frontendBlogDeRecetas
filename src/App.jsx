@@ -18,17 +18,39 @@ function App() {
     <BrowserRouter>
       <Menu></Menu>
       <Routes>
-        <Route exact path="/" element={<Inicio></Inicio>}></Route>
-        <Route path="/administrador" element={<Administrador></Administrador>}></Route>
-        <Route path="/nosotros" element={<Nosotros></Nosotros>}></Route>
-        <Route path="/detalleReceta" element={<DetalleReceta></DetalleReceta>}></Route>
-        <Route path="/administrador/crear" element={<FormularioReceta></FormularioReceta>}></Route>
-        <Route path="/administrador/editar/:id" element={<FormularioReceta></FormularioReceta>}></Route>
-        <Route path="*" element={<Error404></Error404>}></Route>
+        <Route exact path='/' element={<Inicio></Inicio>}></Route>
+        <Route
+          path='/administrador'
+          element={<Administrador></Administrador>}
+        ></Route>
+        <Route path='/nosotros' element={<Nosotros></Nosotros>}></Route>
+        <Route
+          path='/detalleReceta'
+          element={<DetalleReceta></DetalleReceta>}
+        ></Route>
+        <Route
+          path='/administrador/crear'
+          element={
+            <FormularioReceta
+              editar={false}
+              titulo='Nueva receta'
+            ></FormularioReceta>
+          }
+        ></Route>
+        <Route
+          path='/administrador/editar/:id'
+          element={
+            <FormularioReceta
+              editar={true}
+              titulo='Editar receta'
+            ></FormularioReceta>
+          }
+        ></Route>
+        <Route path='*' element={<Error404></Error404>}></Route>
       </Routes>
       <Footer></Footer>
     </BrowserRouter>
-  )
+  );
 }
 
 export default App;
