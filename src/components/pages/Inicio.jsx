@@ -1,3 +1,4 @@
+
 import {React, useEffect, useState } from 'react';
 import { leerRecetas } from '../../helpers/queries';
 import CardReceta from '../pages/receta/CardReceta.jsx';
@@ -15,7 +16,6 @@ const Inicio = () => {
       console.log(error);
     }
   };
-
   return (
     <div className='container'>
       <h1 className='text-center my-5'>Rincón de Placeres Gastronómicos</h1>

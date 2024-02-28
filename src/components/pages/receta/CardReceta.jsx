@@ -1,7 +1,7 @@
+
 import {React, useState } from 'react';
 import '../../../style/cardReceta.css';
 import {Link} from "react-router-dom";
-
 const CardReceta = ({ receta }) => {
   return (
     <div className='col-lg-6 p-3'>
@@ -13,6 +13,7 @@ const CardReceta = ({ receta }) => {
           />
         </div>
         <div className='my-3'>
+
           <h3 className='m-0'>{receta.nombreReceta}</h3>
         </div>
         <div>
