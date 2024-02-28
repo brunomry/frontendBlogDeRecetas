@@ -1,0 +1,32 @@
+* {
+  transition: all ease 1s;
+}
+
+.contenedorImg > img {
+  object-fit: cover;
+  width: 15rem;
+  height: 15rem;
+  border-radius: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+.bi-linkedin {
+  font-size: 50px;
+  color: blue;
+}
+
+.bi-linkedin:hover {
+  color: #b4b4b4;
+}
+
+.bi-github {
+  font-size: 50px;
+  color: #000;
+}
+
+.bi-github:hover {
+  color: #b4b4b4;
+}

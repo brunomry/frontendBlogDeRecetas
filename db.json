@@ -1,0 +1,37 @@
+{
+  "recetas": [
+    {
+      "nombreReceta": "Risotto de Champiñones y Espárragos",
+      "descripcionBreve": "Un plato cremoso y reconfortante con el sabor fresco de los champiñones y espárragos.",
+      "descripcionAmplia": "El risotto es un plato italiano clásico que combina arroz cremoso con una variedad de ingredientes. Esta versión incluye champiñones tiernos, espárragos frescos y un toque de vino blanco para un sabor extra. Es perfecto como plato principal o como acompañamiento.",
+      "ingredientes": "Arroz arborio, Champiñones, Espárragos, Caldo de verduras, Cebolla, Ajo, Vino blanco, Queso parmesano rallado, Mantequilla, Aceite de oliva, Sal y pimienta al gusto.",
+      "preparacion": "Sofreír la cebolla y el ajo en aceite de oliva hasta que estén transparentes. Agregar el arroz arborio y cocinar durante unos minutos. Agregar el vino blanco y dejar que se absorba. Agregar el caldo de verduras poco a poco, revolviendo constantemente, hasta que el arroz esté cocido y cremoso. En otra sartén, saltear los champiñones y los espárragos hasta que estén tiernos. Mezclar los champiñones y los espárragos con el risotto. Servir caliente, espolvoreado con queso parmesano rallado y una pizca de pimienta negra molida.",
+      "autor": "Laura Martínez",
+      "fecha": "2024-02-23",
+      "imagen": "https://images.pexels.com/photos/2067418/pexels-photo-2067418.jpeg",
+      "id": "1"
+    },
+    {
+      "nombreReceta": "Pollo a la Parrilla con Verduras Asadas",
+      "descripcionBreve": "Una deliciosa y saludable opción para una comida completa.",
+      "descripcionAmplia": "Este plato combina la jugosidad del pollo a la parrilla con la frescura y sabor de las verduras asadas. Es una opción perfecta para una comida completa y nutritiva, ideal para toda la familia.",
+      "ingredientes": "4 pechugas de pollo, 1 pimiento rojo, 1 pimiento verde, 1 cebolla, 2 zanahorias, Aceite de oliva, Sal y pimienta al gusto.",
+      "preparacion": "Lavar y cortar las verduras en trozos medianos. Marinar las pechugas de pollo con sal, pimienta y un poco de aceite de oliva. Precalentar la parrilla a fuego medio-alto. Asar las pechugas de pollo hasta que estén cocidas por completo, aproximadamente 8-10 minutos por cada lado. Mientras tanto, colocar las verduras en una bandeja para hornear, rociar con aceite de oliva, salpimentar al gusto y hornear a 200°C durante 20-25 minutos o hasta que estén tiernas. Servir el pollo junto con las verduras asadas y disfrutar.",
+      "autor": "Juan Pérez",
+      "fecha": "2024-02-26",
+      "imagen": "https://images.pexels.com/photos/8769143/pexels-photo-8769143.jpeg",
+      "id": "5932"
+    },
+    {
+      "nombreReceta": "Pastel de papa con queso fundido",
+      "descripcionBreve": "Una deliciosa variante de la clásica tortilla de papa con queso fundido.",
+      "descripcionAmplia": "\nEsta Tortilla de Papa con Queso es una opción reconfortante y deliciosa. Las papas se cocinan a la perfección junto con cebollas y luego se mezclan con huevos batidos y queso fundido, creando una combinación irresistible de sabores y texturas.",
+      "ingredientes": "Papas, Huevos, Cebolla, Queso cheddar rallado, Sal, Pimienta, Aceite de oliva.",
+      "preparacion": "Pelar y cortar las papas en rodajas delgadas. En una sartén con aceite de oliva, cocinar las papas y la cebolla hasta que estén tiernas y ligeramente doradas. Batir los huevos en un tazón grande, sazonar con sal y pimienta al gusto. Agregar las papas y cebollas cocidas a los huevos batidos y mezclar bien. Calentar otra sartén con un poco de aceite y verter la mezcla. Cocinar a fuego medio hasta que los bordes estén dorados. Agregar el queso cheddar rallado sobre la mitad de la tortilla y doblar la otra mitad sobre el queso para que se funda. Cocinar unos minutos más hasta que esté bien cocida y el queso esté derretido. Servir caliente.",
+      "autor": "Juanita Gómez",
+      "fecha": "2024-02-07",
+      "imagen": "https://assets.unileversolutions.com/recipes-v2/230661.jpg",
+      "id": "c3bf"
+    }
+  ]
+}
