@@ -22,6 +22,15 @@ function App() {
           path='/administrador'
           element={<Administrador></Administrador>}
         ></Route>
+        <Route
+          path='./administrador/verDetalle/:id'
+          element={
+            <FormularioReceta
+              titulo='Detalles de la receta'
+              verDetalle={true}
+            ></FormularioReceta>
+          }
+        ></Route>
         <Route path='/nosotros' element={<Nosotros></Nosotros>}></Route>
         <Route
           path='/detalleReceta/:id'
