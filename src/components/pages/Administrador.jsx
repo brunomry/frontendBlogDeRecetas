@@ -1,3 +1,4 @@
+
 import { Button, Table } from "react-bootstrap";
 import ItemReceta from "./receta/ItemReceta";
 import { useEffect, useState } from "react";
@@ -31,7 +32,7 @@ const Administrador = () => {
       <hr />
       <Table responsive striped bordered hover>
         <thead>
-          <tr className="text-center">
+          <tr className='text-center'>
             <th>Id</th>
             <th>Nombre de Receta</th>
             <th>Fecha</th>
@@ -41,9 +42,9 @@ const Administrador = () => {
           </tr>
         </thead>
         <tbody>
-          {recetas.map((receta) => (
-            <ItemReceta key={receta.id} receta={receta}></ItemReceta>
-          ))}
+        {
+            recetas.map((receta)=>  <ItemReceta key={receta.id} receta={receta} setRecetas={setRecetas}></ItemReceta>)
+          }
         </tbody>
       </Table>
     </section>
