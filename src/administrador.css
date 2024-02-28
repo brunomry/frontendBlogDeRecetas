@@ -1,0 +1,46 @@
+/*estilos administracion */
+.poppins-thin {
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+  }
+  .mainSection {
+      flex-grow: 1;
+    }
+  
+  .img-thumbnail{
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+  }
+  
+  /* no me quiere andar esta parte xd */
+  td {
+      max-height: 4rem ; /* Establece la altura máxima que deseas */
+      overflow: hidden; /* Oculta el exceso de contenido */
+      text-overflow: ellipsis; /* Muestra puntos suspensivos para indicar que hay más contenido */
+      white-space: nowrap; /* Evita que el texto se desplace a la siguiente línea */
+    }
+  
+  .textarea{
+    resize: none;
+  }
+
+  .inputBroadDescription{
+    height: 150px;
+  }
+
+  .inputPreparation{
+    height: 200px;
+  }
+  
+    @media screen and (min-width: 800px) {
+      /* Estilos para dispositivos grandes (>800px) */
+      .sizeForm {
+        max-width: 800px; /* Ajusta el ancho máximo según tus necesidades */
+        margin-right: auto;
+        margin-left: auto;
+      }
+    }
+  
+

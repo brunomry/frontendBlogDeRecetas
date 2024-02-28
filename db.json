@@ -1,7 +1,7 @@
 {
   "recetas": [
     {
-      "id": "1",
+      "id": "1"
       "nombreReceta": "Pollo a la Parrilla con Verduras Asadas",
       "fecha": "2024-02-21",
       "autor": "Juan Pérez",
@@ -9,7 +9,8 @@
       "preparacion": "Lavar y cortar las verduras en trozos medianos. Marinar las pechugas de pollo con sal, pimienta y un poco de aceite de oliva. Precalentar la parrilla a fuego medio-alto. Asar las pechugas de pollo hasta que estén cocidas por completo, aproximadamente 8-10 minutos por cada lado. Mientras tanto, colocar las verduras en una bandeja para hornear, rociar con aceite de oliva, salpimentar al gusto y hornear a 200°C durante 20-25 minutos o hasta que estén tiernas. Servir el pollo junto con las verduras asadas y disfrutar",
       "descripcionBreve": "Una deliciosa y saludable opción para una comida completa.",
       "descripcionAmplia": "Este plato combina la jugosidad del pollo a la parrilla con la frescura y sabor de las verduras asadas. Es una opción perfecta para una comida completa y nutritiva, ideal para toda la familia.",
-      "imagen": "https://ejemplo.com/imagen-pollo-parrilla.jpg"
+      "imagen": "https://ejemplo.com/imagen-pollo-parrilla.jpg",
+    
     },
     {
       "id": "2",
@@ -17,9 +18,20 @@
       "fecha": "2024-02-21",
       "autor": "María García",
       "ingredientes": "1 taza de quinoa, 2 aguacates maduros, 1 pepino, 1 tomate, Zumo de 1 limón, Aceite de oliva, Sal y pimienta al gusto",
-      "preparacion": "Enjuagar la quinoa bajo agua fría y cocinarla según las instrucciones del paquete. Dejar enfriar. Pelar y cortar los aguacates, el pepino y el tomate en cubos. En un bol grande, mezclar la quinoa cocida, los aguacates, el pepino y el tomate. Agregar el zumo de limón, un chorrito de aceite de oliva, sal y pimienta al gusto. Mezclar bien. Refrigerar durante al menos 30 minutos antes de servir. Decorar con hojas de cilantro fresco antes de servir, si se desea",
+      "preparacion": "Enjuagar la quinoa bajo agua fría y cocinarla según las instrucciones del paquete. Dejar enfriar. Pelar y cortar los aguacates, el pepino y el tomate en cubos. En un bol grande, mezclar la quinoa cocida, los aguacates, el pepino y el tomate. Agregar el zumo de limón, un chorrito de aceite de oliva, sal y pimienta al gusto. Mezclar bien. Refrigerar durante al menos 30 minutos antes de servir. Decorar con hojas de cilantro fresco antes de servir, si se desea.",
       "descripcionBreve": "Una ensalada fresca y nutritiva perfecta para cualquier ocasión.",
       "descripcionAmplia": "Esta ensalada de quinoa y aguacate es una opción saludable y deliciosa para cualquier comida o cena. La combinación de ingredientes frescos y nutritivos la convierte en una opción perfecta para aquellos que buscan una alimentación balanceada y llena de sabor.",
+      "imagen": "https://ejemplo.com/imagen-ensalada-quinoa.jpg"
+    },
+    {
+      "id": "5932",
+      "nombreReceta": "Ensalada de Quinoa y Aguacate",
+      "descripcionBreve": "Una ensalada fresca y nutritiva",
+      "descripcionAmplia": "Esta ensalada de quinoa y aguacate es una opción saludable y deliciosa para cualquier comida o cena. La combinación de ingredientes frescos y nutritivos la convierte en una opción perfecta para aquellos que buscan una alimentación balanceada y llena de sabor.",
+      "ingredientes": "1 taza de quinoa, 2 aguacates maduros, 1 pepino, 1 tomate, Zumo de 1 limón, Aceite de oliva, Sal y pimienta al gusto",
+      "preparacion": "Enjuagar la quinoa bajo agua fría y cocinarla según las instrucciones del paquete. Dejar enfriar. Pelar y cortar los aguacates, el pepino y el tomate en cubos. En un bol grande, mezclar la quinoa cocida, los aguacates, el pepino y el tomate. ",
+      "autor": "María García",
+      "fecha": "2024-02-26",
       "imagen": "https://ejemplo.com/imagen-ensalada-quinoa.jpg"
     },
     {
