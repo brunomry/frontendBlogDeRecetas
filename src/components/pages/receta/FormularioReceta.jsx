@@ -158,6 +158,7 @@ const FormularioReceta = ({ editar, titulo }) => {
                 value: 50,
                 message:
                   'La descripción amplia debe tener como mínimo 50 caracteres',
+
               },
               maxLength: {
                 value: 500,
@@ -289,10 +290,10 @@ const FormularioReceta = ({ editar, titulo }) => {
             })}
           />
           <Form.Text className='text-danger'>
+
             {errors.imagen?.message}
           </Form.Text>
         </Form.Group>
-
         <Form.Group className='mb-3 '>
           <Button type='submit' variant='success' className='m-2 btnForm'>
             Guardar

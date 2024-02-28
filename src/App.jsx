@@ -1,4 +1,5 @@
 import './App.css';
+import "./administrador.css"
 import Footer from './components/common/Footer';
 import Menu from './components/common/Menu';
 import Administrador from './components/pages/Administrador';
@@ -10,6 +11,7 @@ import FormularioReceta from './components/pages/receta/FormularioReceta';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.min.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+
 
 function App() {
   return (
@@ -52,3 +54,4 @@ function App() {
 }
 
 export default App;
+
