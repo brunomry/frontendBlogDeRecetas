@@ -9,7 +9,7 @@ import Swal from 'sweetalert2';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import { useEffect } from 'react';
 
-const FormularioReceta = ({ editar, titulo }) => {
+const FormularioReceta = ({ editar, titulo, verDetalle }) => {
   const {
     register,
     handleSubmit,

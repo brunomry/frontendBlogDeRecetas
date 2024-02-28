@@ -52,7 +52,12 @@ const ItemReceta = ({ receta, setRecetas }) => {
       </td>
       <td>{receta.autor}</td>
       <td className='text-center'>
-        <Button variant='primary' className='me-lg-2'>
+        <Button
+          variant='primary'
+          className='me-lg-2'
+          as={Link}
+          to={'./administrador/verDetalle/:id'}
+        >
           <i className='bi bi-eye-fill'></i>
         </Button>
         <Link
