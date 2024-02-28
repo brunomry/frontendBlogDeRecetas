@@ -46,8 +46,8 @@ const ItemReceta = ({ receta, setRecetas }) => {
           src={receta.imagen}
           className=''
           alt='imagen de comida'
-          width={200}
-          height={150}
+          width={250}
+          height={200}
         ></img>
       </td>
       <td className='text-center align-middle'>{receta.autor}</td>

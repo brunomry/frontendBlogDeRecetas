@@ -5,9 +5,7 @@ import { Card } from "react-bootstrap";
 
 const CardReceta = ({ receta }) => {
   return (
-    <Card
-      className="col-lg-6 p-3 border-0 text-decoration-none"
-    >
+    <Card className="col-lg-6 p-3 border-0 text-decoration-none">
       <div className="contenedor">
         <div className="imgContenedor">
           <img
@@ -16,22 +14,26 @@ const CardReceta = ({ receta }) => {
             title="receta preparada"
           />
         </div>
-        <div className="my-3">
-          <h3 className="m-0">{receta.nombreReceta}</h3>
-        </div>
-        <div>
-          <p className="m-0 my-3">
-            {receta.fecha} | por {receta.autor}
-          </p>
-          <p className="mb-4">{receta.descripcionBreve}</p>
+        <Card.Body className="ps-0 pb-0">
+          <div className="my-3">
+            <h3 className="m-0">{receta.nombreReceta}</h3>
+          </div>
+          <div>
+            <p className="m-0 my-3">
+              {receta.fecha} | por {receta.autor}
+            </p>
+            <p className="briefDescription">{receta.descripcionBreve}</p>
+          </div>
+        </Card.Body>
 
+        <Card.Footer className="ps-0 border-0 bg-white">
           <Link
             className="p-2 botonSeguirLeyendo text-decoration-none text-dark"
             to={`/detalleReceta/${receta.id}`}
           >
             Seguir leyendo <i className="bi bi-arrow-right"></i>
           </Link>
-        </div>
+        </Card.Footer>
       </div>
     </Card>
   );

@@ -141,7 +141,7 @@ const FormularioReceta = ({
                   "La descripción breve debe tener como mínimo 10 caracteres",
               },
               maxLength: {
-                value: 75,
+                value: 85,
                 message:
                   "La descripción breve debe tener como máximo 75 caracteres",
               },
