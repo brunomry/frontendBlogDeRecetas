@@ -36,8 +36,7 @@ const ItemReceta = ({receta, setRecetas}) => {
       }
     });
   }
-
-
+const ItemReceta = ({receta}) => {
   return (
     <tr>
       <td className="text-center">{receta.id}</td>
