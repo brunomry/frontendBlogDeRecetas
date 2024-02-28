@@ -1,19 +1,16 @@
 //consultas
 
-const URL_Receta = import.meta.env.VITE_API_RECETAS;
 
-console.log(URL_Receta);
-
-export const leerRecetaAPI = async () => {
+const URL_Recetas = import.meta.env.VITE_API_RECETAS;
+export const leerRecetas = async () => {
   try {
-    const respuesta = await fetch(URL_Receta);
-    const listaReceta = await respuesta.json();
-    return listaReceta;
+    const respuesta = await fetch(URL_Recetas);
+    const listaRecetas = await respuesta.json();
+    return listaRecetas;
   } catch (error) {
     console.log(error);
   }
 };
-
 export const obtenerRecetaAPI = async (id) => {
   try {
     const respuesta = await fetch(URL_Receta + '/' + id);
@@ -68,3 +65,20 @@ export const borrarRecetaAPI = async(id)=>{
     console.log(error);
   }
 }
+//detalle receta
+const buscarReceta = (recetas, id) => {
+  return recetas.find((receta) => receta.id === id);
+};
+
+export const obtenerRecetaPorID = async (id) => {
+  try {
+    const respuesta = await fetch(URL_Recetas);
+    const recetas = await respuesta.json();
+    const recetaEncontrada = buscarReceta(recetas, id);
+    return recetaEncontrada;
+  } catch (error) {
+    console.log(error);
+    return null;
+  }
+};
+
