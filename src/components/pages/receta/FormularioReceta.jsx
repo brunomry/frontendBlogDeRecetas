@@ -6,7 +6,7 @@ import {
 } from '../../../helpers/queries';
 import { useForm } from 'react-hook-form';
 import Swal from 'sweetalert2';
-import { useNavigate, useParams } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 import { useEffect } from 'react';
 
 const FormularioReceta = ({ editar, titulo }) => {
@@ -49,6 +49,7 @@ const FormularioReceta = ({ editar, titulo }) => {
       console.log('aqui debo editar');
       //tomar los datos y actualizarlo
       const respuesta = await editarRecetaAPI(receta, id);
+      console.log(respuesta.status);
       if (respuesta.status === 200) {
         Swal.fire({
           title: 'Receta modificada!',
@@ -158,7 +159,6 @@ const FormularioReceta = ({ editar, titulo }) => {
                 value: 50,
                 message:
                   'La descripción amplia debe tener como mínimo 50 caracteres',
-
               },
               maxLength: {
                 value: 500,
@@ -290,7 +290,6 @@ const FormularioReceta = ({ editar, titulo }) => {
             })}
           />
           <Form.Text className='text-danger'>
-
             {errors.imagen?.message}
           </Form.Text>
         </Form.Group>
@@ -298,9 +297,9 @@ const FormularioReceta = ({ editar, titulo }) => {
           <Button type='submit' variant='success' className='m-2 btnForm'>
             Guardar
           </Button>
-          <Button type='submit' variant='danger' className='m-2 btnForm'>
+          <Link className='m-2 btn btn-danger' to={'/administrador'}>
             Cancelar
-          </Button>
+          </Link>
         </Form.Group>
       </Form>
     </section>
