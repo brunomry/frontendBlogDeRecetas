@@ -4,7 +4,6 @@ import Swal from 'sweetalert2';
 import { borrarRecetaAPI, leerRecetaAPI } from '../../../helpers/queries';
 
 const ItemReceta = ({ receta, setRecetas }) => {
-  console.log(receta);
   const borrarReceta = () => {
     Swal.fire({
       title: 'Estás seguro de eliminar la receta?',
@@ -20,16 +19,16 @@ const ItemReceta = ({ receta, setRecetas }) => {
         const respuesta = await borrarRecetaAPI(receta.id);
         if (respuesta.status === 200) {
           Swal.fire({
-            title: 'Borrado!',
-            text: `La receta "${receta.nombreReceta}" fue eliminada correctamente`,
+            title: 'Receta eliminada!',
+            text: `La receta "${receta.nombreReceta}" fue eliminada correctamente.`,
             icon: 'success',
           });
           const listaRecetas = await leerRecetaAPI();
           setRecetas(listaRecetas);
         } else {
           Swal.fire({
-            title: 'Ocurrio un error!',
-            text: `La receta "${receta.nombreReceta}" no fue eliminada correctamente. Vuelva a intentarlo`,
+            title: 'Ocurrió un error!',
+            text: `La receta "${receta.nombreReceta}" no fue eliminada correctamente. Vuelva a intentarlo.`,
             icon: 'error',
           });
         }
@@ -39,34 +38,35 @@ const ItemReceta = ({ receta, setRecetas }) => {
 
   return (
     <tr>
-      <td className='text-center'>{receta.id}</td>
-      <td>{receta.nombreReceta}</td>
-
-      <td className='text-end'>{receta.fecha}</td>
-      <td className='text-center'>
+      <td className='text-center align-middle'>{receta.id}</td>
+      <td className='text-center align-middle'>{receta.nombreReceta}</td>
+      <td className='text-center align-middle'>{receta.fecha}</td>
+      <td className='text-center align-middle'>
         <img
           src={receta.imagen}
-          className='img-thumbnail'
+          className=''
           alt='imagen de comida'
+          width={200}
+          height={150}
         ></img>
       </td>
-      <td>{receta.autor}</td>
-      <td className='text-center'>
+      <td className='text-center align-middle'>{receta.autor}</td>
+      <td className='text-center align-middle'>
         <Button
           variant='primary'
-          className='me-lg-2'
+          className='me-md-2 mb-2 mb-2 mb-lg-0'
           as={Link}
           to={'/administrador/verDetalle/' + receta.id}
         >
           <i className='bi bi-eye-fill'></i>
         </Button>
         <Link
-          className='me-lg-2 btn btn-warning'
+          className='me-md-2 btn btn-warning mb-2 mb-lg-0'
           to={'/administrador/editar/' + receta.id}
         >
           <i className='bi bi-pencil-square'></i>
         </Link>
-        <Button variant='danger' onClick={borrarReceta}>
+        <Button variant='danger' className='mt-lg-2 mt-xl-0 me-md-2' onClick={borrarReceta}>
           <i className='bi bi-trash'></i>
         </Button>
       </td>

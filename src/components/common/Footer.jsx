@@ -17,7 +17,7 @@ const Footer = () => {
               <span>blogrecetas@gmail.com</span>
             </p>
             <p className="d-flex justify-content-center gap-2 align-items-center">
-              <i class="bi bi-telephone-fill text-dark fs-4"></i>
+              <i className="bi bi-telephone-fill text-dark fs-4"></i>
               <span>+54 9 381 6485283</span>
             </p>
           </div>
@@ -32,13 +32,13 @@ const Footer = () => {
           <div className="col-md-4 col-xl-3">
             <h5 className="mb-3">Seguinos en redes sociales</h5>
             <div className="d-flex gap-3 justify-content-center">
-              <Link to="/error404">
+              <Link to="/error404" target="_BLANK">
                 <i className="bi bi-facebook fs-2 text-white"></i>
               </Link>
-              <Link to="/error404">
+              <Link to="/error404" target="_BLANK">
                 <i className="bi bi-instagram fs-2 text-white"></i>
               </Link>
-              <Link to="/error404">
+              <Link to="/error404" target="_BLANK">
                 <i className="bi bi-youtube fs-2 text-white"></i>
               </Link>
             </div>

@@ -24,20 +24,19 @@ const FormularioReceta = ({
     reset,
     setValue,
   } = useForm();
+
   const { id } = useParams();
   const navegacion = useNavigate();
+  
   useEffect(() => {
-    //invocar una funcion que devuelva un producto con el id del parametro
-    // if (editar) {
     cargarDatosReceta();
-    // }
   }, []);
+
   const cargarDatosReceta = async () => {
     try {
       const respuesta = await obtenerRecetaAPI(id);
       if (respuesta.status === 200) {
         const recetaEncontrada = await respuesta.json();
-        //quiero cargar el producto encontrado en el formulario
         setValue("nombreReceta", recetaEncontrada.nombreReceta);
         setValue("descripcionBreve", recetaEncontrada.descripcionBreve);
         setValue("descripcionAmplia", recetaEncontrada.descripcionAmplia);
@@ -55,7 +54,6 @@ const FormularioReceta = ({
     if (editar) {
       console.log("aqui debo editar");
       const respuesta = await editarRecetaAPI(receta, id);
-      console.log(respuesta.status);
       if (respuesta.status === 200) {
         Swal.fire({
           title: "Receta modificada!",
@@ -79,6 +77,7 @@ const FormularioReceta = ({
           icon: "success",
         });
         reset();
+        navegacion("/administrador");
       } else {
         Swal.fire({
           title: "Ocurrió un error!",
@@ -92,12 +91,12 @@ const FormularioReceta = ({
   return (
     <section className="container mainSection">
       <h1 className="display-4 mt-5">{titulo}</h1>
-      <hr />
+      <hr className="sizeForm text-start my-0 mb-4"/>
       <p className={`m-2 ${ocultar ? "d-none" : ""}`}>
         Los campos obligatorios están marcados con{" "}
         <span className="text-danger fw-bold" >*</span>
       </p>
-      <Form className="my-4 sizeForm" onSubmit={handleSubmit(recetaValidada)}>
+      <Form className="my-4 sizeForm mx-auto" onSubmit={handleSubmit(recetaValidada)}>
         <Form.Group className="mb-3 " controlId="formNombreReceta">
           <Form.Label className="fw-medium">
             Nombre de Receta <span className={`text-danger fw-bold ${ocultar ? "d-none" : ""}`}>*</span>

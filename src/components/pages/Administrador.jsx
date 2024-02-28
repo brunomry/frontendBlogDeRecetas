@@ -21,18 +21,18 @@ const Administrador = () => {
   };
 
   return (
-    <section className='container mainSection'>
+    <section className='container mainSection pb-5'>
       <div className='d-flex justify-content-between align-items-center mt-5'>
-        <h1 className='display-4 '>Lista de Recetas registradas</h1>
+        <h1 className=''>Lista de Recetas registradas</h1>
         <Button
           as={Link}
           to={'/administrador/crear'}
           className='btn btn-primary'
         >
-          <i className='bi bi-file-earmark-plus'></i>
+          <i className='bi bi-file-earmark-plus fs-5'></i>
         </Button>
       </div>
-      <hr />
+      <hr className='mt-0 mb-5'/>
       <Table responsive striped bordered hover>
         <thead>
           <tr className='text-center'>

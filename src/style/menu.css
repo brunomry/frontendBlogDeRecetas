@@ -1,7 +1,3 @@
-header{
-  height: 230px;
-}
-
 .nav-link{
   border-bottom: 3px solid #dcd9d6;;
 }
@@ -13,4 +9,10 @@ header{
 .nav-link:hover{
   color: #000;
   border-bottom: 3px solid #206057;
+}
+
+@media all and (min-width:768px){
+  header{
+    height: 230px;
+  }
 }

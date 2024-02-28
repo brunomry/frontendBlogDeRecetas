@@ -1,5 +1,4 @@
 import React from 'react';
-import imagenReceta from '../../../assets/receta (1).jpeg';
 import FormComentarioReceta from './FormComentarioReceta';
 import '../../../style/detalleReceta.css';
 import { useParams } from 'react-router-dom';
@@ -30,7 +29,7 @@ const DetalleReceta = () => {
         <h1 className='text-center mb-4'>{receta.nombreReceta}</h1>
         <figure className='text-center'>
           <img
-            src={imagenReceta}
+            src={receta.imagen}
             alt='imagen de receta'
             className='imgReceta'
           />
@@ -47,7 +46,7 @@ const DetalleReceta = () => {
         </ul>
         <h3>Preparación</h3>
         <ol type='1'>
-          {receta.preparacion.split('.').map((paso, index) => (
+          {receta.preparacion.split('. ').map((paso, index) => (
             <li key={index}>{paso}</li>
           ))}
         </ol>

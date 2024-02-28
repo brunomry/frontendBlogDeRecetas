@@ -1,6 +1,6 @@
-//consultas
-
 const URL_Recetas = import.meta.env.VITE_API_RECETAS;
+
+//GET
 export const leerRecetaAPI = async () => {
   try {
     const respuesta = await fetch(URL_Recetas);
@@ -10,10 +10,10 @@ export const leerRecetaAPI = async () => {
     console.log(error);
   }
 };
+
 export const obtenerRecetaAPI = async (id) => {
   try {
     const respuesta = await fetch(URL_Recetas + '/' + id);
-    console.log(respuesta);
     return respuesta;
   } catch (error) {
     console.log(error);
@@ -30,7 +30,6 @@ export const crearRecetaAPI = async (recetaNueva) => {
       },
       body: JSON.stringify(recetaNueva),
     });
-    console.log(respuesta);
     return respuesta;
   } catch (error) {
     console.log(error);
@@ -59,12 +58,12 @@ export const borrarRecetaAPI = async (id) => {
     const respuesta = await fetch(`${URL_Recetas}/${id}`, {
       method: 'DELETE',
     });
-    console.log(respuesta);
     return respuesta;
   } catch (error) {
     console.log(error);
   }
 };
+
 //detalle receta
 const buscarReceta = (recetas, id) => {
   return recetas.find((receta) => receta.id === id);
