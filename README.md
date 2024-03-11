@@ -52,11 +52,11 @@ La aplicación está desplegada en Netlify. Puedes acceder haciendo clic en el s
 
 1. Clona este repositorio en tu máquina local a través de una terminal:
 
-  git clone <[url-del-repositorio](https://github.com/brunomry/ejercicio14_tp_react.git)>
+  git clone <[url-del-repositorio](https://github.com/brunomry/BlogDeRecetas_react.git)>
 
 2. Navega al directorio del proyecto:
 
-  cd ejercicio14_tp_react
+  cd BlogDeRecetas_react
 
 3. Instala las dependencias del proyecto:
 
