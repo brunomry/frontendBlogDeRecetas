@@ -4,14 +4,20 @@ Este proyecto es una aplicación web sobre un blog de recetas de cocina.
 
 ##  Aplicación Web con React y Vite
 
-Esta aplicación realizada en forma grupal corresponde al ejercicio N°14 del Trabajo Práctico de React del curso Desarrollador Full Stack dictado por RollingCodeSchool.
+Esta aplicación previamente realizada en forma grupal corresponde al ejercicio N°14 del Trabajo Práctico de React del curso Desarrollador Full Stack dictado por RollingCodeSchool. Se procedió a clonar el repositorio [blogDeRecetas_react](https://github.com/brunomry/BlogDeRecetas_react.git) para agregar nuevos requerimientos solicitados en ejercicio N°6 de Trabajo Práctico de Backend.
 
-## Enunciado - Requerimientos
+## Enunciado - Nuevos Requerimientos
 
 Blog de recetas - Dificultad: 🟢🟡🔴
 Crear una aplicación web, que permita mostrar un blog de recetas de cocina en una
-página, desde otra página debo poder agregar, modificar o quitar las recetas y
-estas deben estar almacenadas en el localstorage o json-server.
+página, desde otra página debo poder agregar, modificar o quitar las recetas. Como nuevo requerimiento
+se deben agregar las opciones de login y registro.
+
+## Integración con proyecto de Backend
+
+Este proyecto de Frontend se integró a su proyecto Backend correspondiente donde se utilizó la base de datos no relacional de MongoDB para almacenar los datos de las recetas.
+
+#### Repositorio Backend: [backendBlogDeRecetas](https://github.com/brunomry/backendBlogDeRecetas.git)
 
 ## Logotipo 
 
@@ -21,15 +27,11 @@ estas deben estar almacenadas en el localstorage o json-server.
 
 [Google Drive](https://drive.google.com/drive/folders/13ZabV0a_Ao0p4eXtWI-nWSeYsAYEb3Mg?usp=drive_link)
 
-## Link de Trello
-
-[Trello](https://trello.com/b/XWWMeb7j/blog)
-
 ## Link del Proyecto deployado
 
 La aplicación está desplegada en Netlify. Puedes acceder haciendo clic en el siguiente enlace:
 
-[Ejercicio 14](https://rincondeplaceresgastronomicos.netlify.app)
+[Ejercicio 6 - Trabajo Práctico de Backend](https://rincondeplaceresgastronomicos-rpg.netlify.app)
 
 ## Funcionalidades Principales 
 
@@ -44,7 +46,14 @@ La aplicación está desplegada en Netlify. Puedes acceder haciendo clic en el s
     * Editar Receta (Update): Los administradores pueden modificar los detalles de las recetas existentes, como el título, la descripción, los ingredientes y los pasos de preparación.
     * Eliminar Receta (Delete): Los administradores pueden eliminar recetas que ya no deseen mantener en el blog.
 
-## Requisitos
+4. Autenticación de Usuarios:
+    
+    * Iniciar Sesión (Login): Los usuarios pueden iniciar sesión en la aplicación utilizando sus credenciales.
+    * Registrarse: Los usuarios pueden crear una cuenta nueva en la aplicación.
+    
+    Nota: Las opciones de administrador estarán ocultas para los usuarios que no tengan privilegios de administrador.
+
+## Requisitos previos
 
 - Node.js instalado en tu sistema. Puedes descargarlo [aquí](https://nodejs.org/).
 
@@ -52,11 +61,11 @@ La aplicación está desplegada en Netlify. Puedes acceder haciendo clic en el s
 
 1. Clona este repositorio en tu máquina local a través de una terminal:
 
-  git clone <[url-del-repositorio](https://github.com/brunomry/BlogDeRecetas_react.git)>
+  git clone <[url-del-repositorio](https://github.com/brunomry/frontendBlogDeRecetas.git)>
 
 2. Navega al directorio del proyecto:
 
-  cd BlogDeRecetas_react
+  cd frontendBlogDeRecetas
 
 3. Instala las dependencias del proyecto:
 
@@ -75,7 +84,6 @@ La aplicación está desplegada en Netlify. Puedes acceder haciendo clic en el s
 - [Webpack](https://webpack.js.org/)
 - [CSS3](https://developer.mozilla.org/es/docs/Web/CSS)
 - [SweetAlert2](https://sweetalert2.github.io/#download)
-- [Json-Server](https://github.com/typicode/json-server)
 
 ## Crear un proyecto con React usando Vite
 
@@ -115,11 +123,7 @@ Una vez confirmadas las opciones, se mostrarán los comandos que debes ejecutar 
 
 Una vez que hayas ejecutado el tercer comando y tengas el servidor en funcionamiento, puedes continuar trabajando en tu proyecto desde la terminal de tu editor de código preferido. Para salir del servidor interno en la terminal, simplemente presiona `ctrl + c`.
 
-## Equipo
+## Autor
 
-| Nombre                              | Perfil GitHub                                            |
-|-------------------------------------|----------------------------------------------------------|
-| Bruno Madozzo Romay                 | [brunomry](https://github.com/brunomry)                  |
-| Leonel Rodrigo Cordero              | [LeonelRC23](https://github.com/LeonelRC23)              |
-| Javier Jimenez                      | [Javier359](https://github.com/Javier359)                |
+Bruno Madozzo Romay
 

@@ -42,7 +42,7 @@ const Menu = ({ inicio, recetas, administrador, nosotros }) => {
                 className={`nav-link me-3 fs-5 ${nosotros ? "nav-link" : ""}`}
                 to="/nosotros"
               >
-                Nosotros
+                ¿Quiénes somos?
               </NavLink>
             </Nav>
           </Navbar.Collapse>
