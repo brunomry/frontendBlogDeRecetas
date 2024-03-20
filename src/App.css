@@ -23,6 +23,20 @@
   width: 150px;
 }
 
+.containerLogin{
+  width: 100%;
+}
+
+.btnLogin{
+  width: 100%;
+}
+
+@media all and (min-width:576px){
+  .containerLogin{
+    width: 500px;
+  }
+}
+
 @media all and (min-width:992px){
   .logo{
     width: 250px;
