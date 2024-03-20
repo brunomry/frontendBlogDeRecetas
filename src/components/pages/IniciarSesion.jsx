@@ -73,7 +73,7 @@ const IniciarSesion = ({ setUsuarioLogueado }) => {
                 type="password"
                 placeholder="Contraseña"
                 {...register("password", {
-                  required: "El password es obligatorio",
+                  required: "La contraseña es obligatoria",
                   minLength: {
                     value: 8,
                     message: "Debe ingresar 8 caracteres como mínimo",
