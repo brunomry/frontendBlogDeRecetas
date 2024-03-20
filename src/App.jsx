@@ -11,11 +11,20 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import RutasAdmin from "./components/routes/RutasAdmin";
 import RutasProtegidas from "./components/routes/RutasProtegidas";
 import IniciarSesion from "./components/pages/IniciarSesion";
+import { useState } from "react";
 
 function App() {
+
+  const usuario =
+    JSON.parse(sessionStorage.getItem("usuarioBlogRecetas")) || "";
+  const [usuarioLogueado, setUsuarioLogueado] = useState(usuario);
+
   return (
     <BrowserRouter>
-      <Menu></Menu>
+      <Menu
+      usuarioLogueado={usuarioLogueado}
+      setUsuarioLogueado={setUsuarioLogueado}
+      ></Menu>
       <Routes>
         <Route exact path="/" element={<Inicio></Inicio>} inicio={true}></Route>
         <Route
@@ -35,7 +44,7 @@ function App() {
         <Route
           exact
           path="/iniciarsesion"
-          element={<IniciarSesion></IniciarSesion>}
+          element={<IniciarSesion setUsuarioLogueado={setUsuarioLogueado}></IniciarSesion>}
         ></Route>
         <Route path="*" element={<Error404></Error404>}></Route>
       </Routes>

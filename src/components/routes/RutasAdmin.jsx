@@ -5,7 +5,7 @@ import FormularioReceta from "../pages/receta/FormularioReceta";
 const RutasAdmin = () => {
   return (
     <Routes>
-      <Route path="/" element={<Administrador></Administrador>}></Route>
+      <Route path="/" element={<Administrador administrador={true}></Administrador>}></Route>
       <Route
         exact
         path="/crear"

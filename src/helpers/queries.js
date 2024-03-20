@@ -65,3 +65,23 @@ export const borrarRecetaAPI = async (id) => {
     console.log(error);
   }
 };
+
+const userAdmin = {
+  email: "admin@blogrecetas.com",
+  password: "blogRC2024#",
+};
+
+export const login = (usuario) => {
+  if (
+    usuario.email === userAdmin.email &&
+    usuario.password === userAdmin.password
+  ) {
+    sessionStorage.setItem(
+      "usuarioBlogRecetas",
+      JSON.stringify(usuario.email)
+    );
+    return true;
+  } else {
+    return false;
+  }
+};

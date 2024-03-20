@@ -19,7 +19,7 @@ const CardReceta = ({ receta }) => {
           </div>
           <div>
             <p className="m-0 my-3">
-              {receta.fecha} | por {receta.autor}
+              {receta.fecha.split('T')[0]} | por {receta.autor}
             </p>
             <p className="briefDescription">{receta.descripcionBreve}</p>
           </div>

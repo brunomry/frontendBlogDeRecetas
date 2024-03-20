@@ -9,10 +9,10 @@ const DetalleReceta = () => {
   const [receta, setReceta] = useState({});
 
   useEffect(() => {
-    cargarDatosReceta();
+    cargarDetalle();
   }, []);
 
-  const cargarDatosReceta = async () => {
+  const cargarDetalle = async () => {
     try {
       const respuesta = await obtenerRecetaAPI(id);
       const recetaObtenida = await respuesta.json();
@@ -33,7 +33,7 @@ const DetalleReceta = () => {
             className='imgReceta'
           />
           <figcaption className='mt-2'>
-            {receta.fecha} | Por {receta.autor}
+            {receta.fecha.split('T')[0]} | Por {receta.autor}
           </figcaption>
         </figure>
         <p>{receta.descripcionAmplia}</p>

@@ -4,7 +4,7 @@ import '../../style/footer.css';
 
 const Footer = () => {
   return (
-    <footer className="text-center bgFooter text-light pt-4">
+    <footer className="text-center bgFooter text-light">
       <section className="mb-5">
         <article className="mt-5 mb-4 row mx-0 justify-content-center gap-5 gap-md-5 gap-xl-0">
           <div className="text-center col-xl-3">

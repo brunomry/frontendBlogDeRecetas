@@ -38,9 +38,8 @@ const ItemReceta = ({ receta, setRecetas }) => {
 
   return (
     <tr>
-      <td className='text-center align-middle'>{receta._id}</td>
       <td className='text-center align-middle'>{receta.nombreReceta}</td>
-      <td className='text-center align-middle'>{receta.fecha}</td>
+      <td className='text-center align-middle'>{receta.fecha.split('T')[0]}</td>
       <td className='text-center align-middle'>
         <img
           src={receta.imagen}

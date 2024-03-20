@@ -1,11 +1,13 @@
+import { Navigate } from "react-router";
 
+const RutasProtegidas = ({children}) => {
+  const administrador = JSON.parse(sessionStorage.getItem("usuarioBlogRecetas")) || null;
 
-const RutasProtegidas = () => {
-  return (
-    <div>
-      
-    </div>
-  );
+  if (!administrador) {
+    return <Navigate to={"/iniciarsesion"}></Navigate>;
+  } else {
+    return children;
+  }
 };
 
 export default RutasProtegidas;
