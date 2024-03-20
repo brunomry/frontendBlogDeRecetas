@@ -23,9 +23,11 @@ function App() {
           element={<Administrador></Administrador>}
         ></Route>
         <Route
+          exact
           path="/administrador/verDetalle/:id"
           element={
             <FormularioReceta
+              editar={true}
               titulo="Detalle de la receta"
               boton="Volver"
               deshabilitado={true}
@@ -40,6 +42,7 @@ function App() {
           element={<DetalleReceta></DetalleReceta>}
         ></Route>
         <Route
+          exact
           path="/administrador/crear"
           element={
             <FormularioReceta
@@ -52,6 +55,7 @@ function App() {
           }
         ></Route>
         <Route
+          exact
           path="/administrador/editar/:id"
           element={
             <FormularioReceta
@@ -64,7 +68,7 @@ function App() {
         ></Route>
         <Route path="*" element={<Error404></Error404>}></Route>
       </Routes>
-      <Footer></Footer>
+      <Footer ocultar={true}></Footer>
     </BrowserRouter>
   );
 }

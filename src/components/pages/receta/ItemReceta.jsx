@@ -38,14 +38,14 @@ const ItemReceta = ({ receta, setRecetas }) => {
 
   return (
     <tr>
-      <td className='text-center align-middle'>{receta._id}</td>
       <td className='text-center align-middle'>{receta.nombreReceta}</td>
-      <td className='text-center align-middle'>{receta.fecha}</td>
+      <td className='text-center align-middle'>{receta.fecha.split('T')[0]}</td>
       <td className='text-center align-middle'>
         <img
           src={receta.imagen}
           className=''
-          alt='imagen de comida'
+          alt={receta.nombreReceta}
+          title={receta.nombreReceta}
           width={250}
           height={200}
         ></img>
@@ -56,7 +56,7 @@ const ItemReceta = ({ receta, setRecetas }) => {
           variant='primary'
           className='me-md-2 mb-2 mb-2 mb-lg-0'
           as={Link}
-          to={'/administrador/verDetalle/' + receta._id}
+          to={`/administrador/verDetalle/${receta._id}`}
         >
           <i className='bi bi-eye-fill'></i>
         </Button>

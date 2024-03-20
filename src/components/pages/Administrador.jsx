@@ -36,7 +36,6 @@ const Administrador = () => {
       <Table responsive striped bordered hover>
         <thead>
           <tr className='text-center'>
-            <th>Id</th>
             <th>Nombre de Receta</th>
             <th>Fecha</th>
             <th>Imagen</th>
