@@ -2,38 +2,38 @@ import "./App.css";
 import "./style/administrador.css";
 import Footer from "./components/common/Footer";
 import Menu from "./components/common/Menu";
-import Administrador from "./components/pages/Administrador";
 import Inicio from "./components/pages/Inicio";
 import Error404 from "./components/pages/Error404";
 import DetalleReceta from "./components/pages/receta/DetalleReceta";
-import FormularioReceta from "./components/pages/receta/FormularioReceta";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.min.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import RutasAdmin from "./components/routes/RutasAdmin";
+import RutasProtegidas from "./components/routes/RutasProtegidas";
+import IniciarSesion from "./components/pages/IniciarSesion";
+import { useState } from "react";
 
 function App() {
+
+  const usuario =
+    JSON.parse(sessionStorage.getItem("usuarioBlogRecetas")) || "";
+  const [usuarioLogueado, setUsuarioLogueado] = useState(usuario);
+
   return (
     <BrowserRouter>
-      <Menu></Menu>
+      <Menu
+      usuarioLogueado={usuarioLogueado}
+      setUsuarioLogueado={setUsuarioLogueado}
+      ></Menu>
       <Routes>
         <Route exact path="/" element={<Inicio></Inicio>} inicio={true}></Route>
         <Route
-          path="/administrador"
-          administrador={true}
-          element={<Administrador></Administrador>}
-        ></Route>
-        <Route
           exact
-          path="/administrador/verDetalle/:id"
+          path="/administrador/*"
           element={
-            <FormularioReceta
-              editar={true}
-              titulo="Detalle de la receta"
-              boton="Volver"
-              deshabilitado={true}
-              ocultar={true}
-              verDetalle={true}
-            ></FormularioReceta>
+            <RutasProtegidas>
+              <RutasAdmin />
+            </RutasProtegidas>
           }
         ></Route>
         <Route
@@ -43,28 +43,8 @@ function App() {
         ></Route>
         <Route
           exact
-          path="/administrador/crear"
-          element={
-            <FormularioReceta
-              editar={false}
-              deshabilitado={false}
-              boton="Cancelar"
-              ocultar={false}
-              titulo="Nueva receta"
-            ></FormularioReceta>
-          }
-        ></Route>
-        <Route
-          exact
-          path="/administrador/editar/:id"
-          element={
-            <FormularioReceta
-              editar={true}
-              boton="Cancelar"
-              ocultar={false}
-              titulo="Editar receta"
-            ></FormularioReceta>
-          }
+          path="/iniciarsesion"
+          element={<IniciarSesion setUsuarioLogueado={setUsuarioLogueado}></IniciarSesion>}
         ></Route>
         <Route path="*" element={<Error404></Error404>}></Route>
       </Routes>

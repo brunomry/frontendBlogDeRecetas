@@ -33,8 +33,8 @@ const DetalleReceta = () => {
             alt="imagen de receta"
             className="imgReceta"
           />
-          <figcaption className="mt-2">
-            {receta.fecha.split("T")[0]} | Por {receta.autor}
+          <figcaption className='mt-2'>
+            {receta.fecha.split('T')[0]} | Por {receta.autor}
           </figcaption>
         </figure>
         <p>{receta.descripcionAmplia}</p>

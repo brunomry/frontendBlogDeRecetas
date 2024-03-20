@@ -1,9 +1,25 @@
-import { Nav, Navbar, Container } from "react-bootstrap";
-import { Link, NavLink } from "react-router-dom";
+import { Nav, Navbar, Container, Button} from "react-bootstrap";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import logo from "../../assets/logoverde.png";
 import "../../style/menu.css";
 
-const Menu = ({ inicio, recetas, administrador, nosotros }) => {
+const Menu = ({
+  inicio,
+  recetas,
+  administrador,
+  nosotros,
+  usuarioLogueado,
+  setUsuarioLogueado,
+}) => {
+
+  const navegacion = useNavigate();
+
+  const salir = () => {
+    sessionStorage.removeItem('usuarioBlogRecetas');
+    setUsuarioLogueado("");
+    navegacion('/');
+  }
+
   return (
     <header>
       <Navbar expand="md" className="bg-body-tertiary">
@@ -30,20 +46,40 @@ const Menu = ({ inicio, recetas, administrador, nosotros }) => {
               </NavLink>
               <NavLink
                 end
-                className={`nav-link me-3 fs-5 ${
-                  administrador ? "nav-link" : ""
-                }`}
-                to="/administrador"
-              >
-                Administrador
-              </NavLink>
-              <NavLink
-                end
                 className={`nav-link me-3 fs-5 ${nosotros ? "nav-link" : ""}`}
                 to="/nosotros"
               >
                 ¿Quiénes somos?
               </NavLink>
+              {usuarioLogueado !== "" ? (
+                <>
+                  <NavLink
+                    end
+                    className={`nav-link me-3 fs-5 ${
+                      administrador ? "nav-link" : ""
+                    }`}
+                    to="/administrador"
+                  >
+                    Administrador
+                  </NavLink>
+                  <Button className="nav-link me-3 fs-5 mb-1" variant="link" as={NavLink} onClick={salir}>
+                    Salir
+                  </Button>
+                </>
+              ) : (
+                <>
+                  <NavLink end className="nav-link me-3 fs-5" to="/registrarse">
+                    Registrarme
+                  </NavLink>
+                  <NavLink
+                    end
+                    className="nav-link me-3 fs-5"
+                    to="/iniciarsesion"
+                  >
+                    Iniciar sesión
+                  </NavLink>
+                </>
+              )}
             </Nav>
           </Navbar.Collapse>
         </Container>
