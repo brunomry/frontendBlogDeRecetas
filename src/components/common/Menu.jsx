@@ -68,7 +68,7 @@ const Menu = ({
                 </>
               ) : (
                 <>
-                  <NavLink end className="nav-link me-3 fs-5" to="/registrarse">
+                  <NavLink end className="nav-link me-3 fs-5" to="/registro">
                     Registrarme
                   </NavLink>
                   <NavLink

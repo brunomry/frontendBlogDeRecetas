@@ -1,44 +1,21 @@
 import { Card, Form, Button } from "react-bootstrap";
 import { useForm } from "react-hook-form";
-import { useNavigate } from "react-router-dom";
-import { login } from "../../helpers/queries";
-import Swal from 'sweetalert2';
 
-const IniciarSesion = ({ setUsuarioLogueado }) => {
+const IniciarSesion = () => {
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
 
-  const navegacion = useNavigate();
-
-  const onSubmit = (usuario) => {
-    if (login(usuario)) {
-      Swal.fire({
-        title: "Usuario Logueado",
-        text: `Bienvenido ${usuario.email}`,
-        icon: "success",
-      });
-      navegacion("/administrador");
-      setUsuarioLogueado(usuario.email);
-    } else {
-      Swal.fire({
-        title: "Ocurrió un error",
-        text: `El email o contraseña es incorrecto`,
-        icon: "error",
-      });
-    }
-  };
-
   return (
     <section className="mainSection containerLogin mx-auto px-2">
       <Card className="my-5">
         <Card.Header as="h5" className="text-center">
-          Bienvenido
+          Regístrese
         </Card.Header>
         <Card.Body>
-          <Form onSubmit={handleSubmit(onSubmit)}>
+          <Form onSubmit={handleSubmit()}>
             <Form.Group className="mb-3" controlId="formBasicEmail">
               <Form.Label>Email</Form.Label>
               <Form.Control
@@ -94,8 +71,8 @@ const IniciarSesion = ({ setUsuarioLogueado }) => {
               </Form.Text>
             </Form.Group>
             <div className="text-end">
-              <Button variant="dark" type="submit" className="px-5 btnLogin">
-                Iniciar sesión
+              <Button variant="success" type="submit" className="px-5">
+                Registrarme
               </Button>
             </div>
           </Form>
