@@ -46,7 +46,7 @@ const Footer = () => {
         </article>
       </section>
       <p className="fw-bold mb-1">
-        &copy;Copyright 2024. Todos los derechos reservados.
+        &copy;Copyright 2024. Todos los derechos reservados. Diseñado por Bruno Madozzo.
       </p>
     </footer>
   );
