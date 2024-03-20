@@ -1,4 +1,3 @@
-import { React, useState } from "react";
 import "../../../style/cardReceta.css";
 import { Link } from "react-router-dom";
 import { Card } from "react-bootstrap";
@@ -29,7 +28,7 @@ const CardReceta = ({ receta }) => {
         <Card.Footer className="ps-0 border-0 bg-white">
           <Link
             className="p-2 botonSeguirLeyendo text-decoration-none text-dark"
-            to={`/detalleReceta/${receta.id}`}
+            to={`/detalleReceta/${receta._id}`}
           >
             Seguir leyendo <i className="bi bi-arrow-right"></i>
           </Link>

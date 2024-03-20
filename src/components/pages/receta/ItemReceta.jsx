@@ -1,7 +1,7 @@
 import { Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2';
-import { borrarRecetaAPI, leerRecetaAPI } from '../../../helpers/queries';
+import { borrarRecetaAPI, leerRecetaAPI } from '../../../helpers/queries.js';
 
 const ItemReceta = ({ receta, setRecetas }) => {
   const borrarReceta = () => {
@@ -16,7 +16,7 @@ const ItemReceta = ({ receta, setRecetas }) => {
       cancelButtonText: 'Cancelar',
     }).then(async (result) => {
       if (result.isConfirmed) {
-        const respuesta = await borrarRecetaAPI(receta.id);
+        const respuesta = await borrarRecetaAPI(receta._id);
         if (respuesta.status === 200) {
           Swal.fire({
             title: 'Receta eliminada!',
@@ -38,7 +38,7 @@ const ItemReceta = ({ receta, setRecetas }) => {
 
   return (
     <tr>
-      <td className='text-center align-middle'>{receta.id}</td>
+      <td className='text-center align-middle'>{receta._id}</td>
       <td className='text-center align-middle'>{receta.nombreReceta}</td>
       <td className='text-center align-middle'>{receta.fecha}</td>
       <td className='text-center align-middle'>
@@ -56,13 +56,13 @@ const ItemReceta = ({ receta, setRecetas }) => {
           variant='primary'
           className='me-md-2 mb-2 mb-2 mb-lg-0'
           as={Link}
-          to={'/administrador/verDetalle/' + receta.id}
+          to={'/administrador/verDetalle/' + receta._id}
         >
           <i className='bi bi-eye-fill'></i>
         </Button>
         <Link
           className='me-md-2 btn btn-warning mb-2 mb-lg-0'
-          to={'/administrador/editar/' + receta.id}
+          to={'/administrador/editar/' + receta._id}
         >
           <i className='bi bi-pencil-square'></i>
         </Link>

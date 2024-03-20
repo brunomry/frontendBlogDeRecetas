@@ -1,14 +1,12 @@
-import React from 'react';
 import FormComentarioReceta from './FormComentarioReceta';
 import '../../../style/detalleReceta.css';
 import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import Error404 from '../Error404';
-import { obtenerRecetaPorID } from '../../../helpers/queries';
+import { obtenerRecetaAPI } from '../../../helpers/queries';
 
 const DetalleReceta = () => {
   const { id } = useParams();
-  const [receta, setReceta] = useState(null);
+  const [receta, setReceta] = useState({});
 
   useEffect(() => {
     cargarDatosReceta();
@@ -16,14 +14,15 @@ const DetalleReceta = () => {
 
   const cargarDatosReceta = async () => {
     try {
-      const recetaObtenida = await obtenerRecetaPorID(id);
+      const respuesta = await obtenerRecetaAPI(id);
+      const recetaObtenida = await respuesta.json();
       setReceta(recetaObtenida);
     } catch (error) {
       console.log(error);
     }
   };
 
-  return receta ? (
+  return (
     <section className='container py-5'>
       <article className='detailRecipe mx-auto mb-5'>
         <h1 className='text-center mb-4'>{receta.nombreReceta}</h1>
@@ -55,8 +54,6 @@ const DetalleReceta = () => {
         <FormComentarioReceta />
       </article>
     </section>
-  ) : (
-    <Error404 />
   );
 };
 

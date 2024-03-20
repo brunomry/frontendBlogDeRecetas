@@ -29,7 +29,9 @@ const FormularioReceta = ({
   const navegacion = useNavigate();
   
   useEffect(() => {
-    cargarDatosReceta();
+    if(editar){
+      cargarDatosReceta();
+    }
   }, []);
 
   const cargarDatosReceta = async () => {
@@ -52,7 +54,6 @@ const FormularioReceta = ({
   };
   const recetaValidada = async (receta) => {
     if (editar) {
-      console.log("aqui debo editar");
       const respuesta = await editarRecetaAPI(receta, id);
       if (respuesta.status === 200) {
         Swal.fire({
