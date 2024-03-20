@@ -11,6 +11,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import RutasAdmin from "./components/routes/RutasAdmin";
 import RutasProtegidas from "./components/routes/RutasProtegidas";
 import IniciarSesion from "./components/pages/IniciarSesion";
+import Registro from "./components/pages/Registro";
 import { useState } from "react";
 
 function App() {
@@ -45,6 +46,11 @@ function App() {
           exact
           path="/iniciarsesion"
           element={<IniciarSesion setUsuarioLogueado={setUsuarioLogueado}></IniciarSesion>}
+        ></Route>
+         <Route
+          exact
+          path="/registro"
+          element={<Registro></Registro>}
         ></Route>
         <Route path="*" element={<Error404></Error404>}></Route>
       </Routes>
