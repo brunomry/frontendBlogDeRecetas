@@ -1,7 +1,6 @@
 const URL_Recetas = import.meta.env.VITE_API_RECETAS;
 const URL_Receta = import.meta.env.VITE_API_RECETA;
 
-
 //GET
 export const leerRecetaAPI = async () => {
   try {
@@ -15,7 +14,7 @@ export const leerRecetaAPI = async () => {
 
 export const obtenerRecetaAPI = async (id) => {
   try {
-    const respuesta = await fetch(URL_Receta + '/' + id);
+    const respuesta = await fetch(URL_Receta + "/" + id);
     return respuesta;
   } catch (error) {
     console.log(error);
@@ -26,9 +25,9 @@ export const obtenerRecetaAPI = async (id) => {
 export const crearRecetaAPI = async (recetaNueva) => {
   try {
     const respuesta = await fetch(URL_Recetas, {
-      method: 'POST',
+      method: "POST",
       headers: {
-        'Content-Type': 'application/json',
+        "Content-Type": "application/json",
       },
       body: JSON.stringify(recetaNueva),
     });
@@ -42,9 +41,9 @@ export const crearRecetaAPI = async (recetaNueva) => {
 export const editarRecetaAPI = async (recetaModificada, id) => {
   try {
     const respuesta = await fetch(`${URL_Receta}/${id}`, {
-      method: 'PUT',
+      method: "PUT",
       headers: {
-        'Content-Type': 'application/json',
+        "Content-Type": "application/json",
       },
       body: JSON.stringify(recetaModificada),
     });
@@ -58,7 +57,7 @@ export const editarRecetaAPI = async (recetaModificada, id) => {
 export const borrarRecetaAPI = async (id) => {
   try {
     const respuesta = await fetch(`${URL_Receta}/${id}`, {
-      method: 'DELETE'
+      method: "DELETE",
     });
     return respuesta;
   } catch (error) {
@@ -76,10 +75,7 @@ export const login = (usuario) => {
     usuario.email === userAdmin.email &&
     usuario.password === userAdmin.password
   ) {
-    sessionStorage.setItem(
-      "usuarioBlogRecetas",
-      JSON.stringify(usuario.email)
-    );
+    sessionStorage.setItem("usuarioBlogRecetas", JSON.stringify(usuario.email));
     return true;
   } else {
     return false;

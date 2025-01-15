@@ -1,9 +1,11 @@
 import { React, useEffect, useState } from "react";
 import { leerRecetaAPI } from "../../helpers/queries";
 import CardReceta from "../pages/receta/CardReceta.jsx";
+import { Spinner } from "react-bootstrap";
 
 const Inicio = () => {
   const [recetas, setRecetas] = useState([]);
+  const [cargando, setCargando] = useState(false);
 
   useEffect(() => {
     consultarAPI();
@@ -13,6 +15,7 @@ const Inicio = () => {
     try {
       const respuesta = await leerRecetaAPI();
       setRecetas(respuesta);
+      setCargando(true);
     } catch (error) {
       console.log(error);
     }
@@ -28,10 +31,19 @@ const Inicio = () => {
         ¡Prepárate para inspirarte y sorprender a tus seres queridos en la mesa!
       </p>
       <h2 className="text-center my-4">Nuestras recetas</h2>
-      <div className="row m-0 gy-3">
-        {recetas.map((receta) => (
-          <CardReceta key={receta._id} receta={receta} />
-        ))}
+      <div>
+        {cargando ? (
+          <div className="row m-0 gy-3">
+            {recetas &&
+              recetas.map((receta) => (
+                <CardReceta key={receta._id} receta={receta} />
+              ))}
+          </div>
+        ) : (
+          <section className="text-center  py-5 mainSection">
+            <Spinner animation="border" role="status"></Spinner>
+          </section>
+        )}
       </div>
     </div>
   );
